@@ -10,7 +10,7 @@ import Contact from '../Contact/Contact'
 import Projects from '../Projects/Projects'
 import Blog from '../Blog/Blog'
 
-const Main = () => (
+const RouteManager = () => (
   <Switch>
     <Route exact path='/' component={Home}></Route>
     <Route exact path='/projects' component={Projects}></Route>
@@ -20,4 +20,4 @@ const Main = () => (
   </Switch>
 )
 
-export default Main;
+export default RouteManager;

@@ -6,6 +6,8 @@ const Navigation = () => (
   <nav>
     <ul>
       <li><NavLink exact activeClassName={css(styles.current)} to='/'>Home</NavLink></li>
+      <li><NavLink exact activeClassName={css(styles.current)} to='/projects'>Projects</NavLink></li>
+      <li><NavLink exact activeClassName={css(styles.current)} to='/blog'>Blog</NavLink></li>
       <li><NavLink exact activeClassName={css(styles.current)} to='/about'>About</NavLink></li>
       <li><NavLink exact activeClassName={css(styles.current)} to='/contact'>Contact</NavLink></li>
     </ul>

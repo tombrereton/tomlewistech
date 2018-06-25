@@ -1,23 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { StyleSheet, css } from 'aphrodite';
+import { css } from 'emotion'
 
 const Navigation = () => (
   <nav>
-    <ul>
-      <li><NavLink exact activeClassName={css(styles.current)} to='/'>Home</NavLink></li>
-      <li><NavLink exact activeClassName={css(styles.current)} to='/projects'>Projects</NavLink></li>
-      <li><NavLink exact activeClassName={css(styles.current)} to='/blog'>Blog</NavLink></li>
-      <li><NavLink exact activeClassName={css(styles.current)} to='/about'>About</NavLink></li>
-      <li><NavLink exact activeClassName={css(styles.current)} to='/contact'>Contact</NavLink></li>
+    <ul className={navBarList}>
+      <li><NavLink exact activeClassName={current} to='/'>Home</NavLink></li>
+      <li><NavLink exact activeClassName={current} to='/projects'>Projects</NavLink></li>
+      <li><NavLink exact activeClassName={current} to='/blog'>Blog</NavLink></li>
+      <li><NavLink exact activeClassName={current} to='/about'>About</NavLink></li>
+      <li><NavLink exact activeClassName={current} to='/contact'>Contact</NavLink></li>
     </ul>
   </nav>
 );
 
-const styles = StyleSheet.create({
-  current: {
-      fontWeight: 'bold'
-  },
-});
+const navBarList = css({
+  listStyleType: 'none',
+  margin: 0,
+  padding: 0,
+})
+
+const current = css({
+  fontWeight: 'bold'
+})
 
 export default Navigation;

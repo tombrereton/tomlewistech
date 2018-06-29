@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'react-emotion'
 
 const Home = () => (
-    <div className='home'>
+    <div>
         <h1>Welcome to my portfolio website</h1>
         <p> Feel free to browse around and learn more about me.</p>
     </div>

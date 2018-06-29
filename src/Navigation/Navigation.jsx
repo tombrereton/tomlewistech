@@ -10,17 +10,15 @@ class Navigation extends React.Component {
 
   render() {
     return (
-      <Menu right styles={styles} className={navBarList}>
-        <nav>
-          <ul>
-            <li><NavLink exact to='/'>Home</NavLink></li>
-            <li><NavLink exact to='/projects'>Projects</NavLink></li>
-            <li><NavLink exact to='/blog'>Blog</NavLink></li>
-            <li><NavLink exact to='/about'>About</NavLink></li>
-            <li><NavLink exact to='/contact'>Contact</NavLink></li>
-          </ul>
-        </nav>
-      </Menu>
+      <nav className={navBarContainer}>
+        <ul>
+          <li><NavLink exact to='/'>Home</NavLink></li>
+          <li><NavLink exact to='/projects'>Projects</NavLink></li>
+          <li><NavLink exact to='/blog'>Blog</NavLink></li>
+          <li><NavLink exact to='/about'>About</NavLink></li>
+          <li><NavLink exact to='/contact'>Contact</NavLink></li>
+        </ul>
+      </nav>
     )
   }
 };
@@ -63,15 +61,26 @@ var styles = {
   }
 }
 
-const navBarList = css({
+const navBarContainer = css({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: 68,
+  backgroundColor: '#FFFFFF',
   '& ul': {
+    margin: 0,
+    padding: 0,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
     listStyleType: 'none'
   },
   '& li a': {
     display: 'block',
-    color: 'white',
+    color: '#707070',
     textAlign: 'center',
-    padding: '14px 16px',
+    paddingLeft: 10,
+    paddingRight: 10,
     textDecoration: 'none'
   },
 })

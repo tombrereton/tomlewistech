@@ -7,7 +7,7 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {
-    families: ['Quicksand:400,700', 'sans-serif']
+    families: ['Quicksand:300', 'sans-serif']
   }
 });
 

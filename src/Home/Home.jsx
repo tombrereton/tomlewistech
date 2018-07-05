@@ -1,10 +1,16 @@
 import React from 'react';
-import styled, { css } from 'react-emotion'
+import {
+  css
+} from 'react-emotion'
+import Button from '@material-ui/core/Button';
 
 const Home = () => (
-    <div className={homeContainer}>
+  <div >
         <h1>Welcome to my portfolio website</h1>
         <p> Feel free to browse around and learn more about me.</p>
+        <Button variant="contained" color="primary">
+          Hello World
+        </Button>
     </div>
 );
 
@@ -22,14 +28,6 @@ const styles = css({
   [mq[1]]: {
     color: 'hotpink'
   }
-})
-
-
-const homeContainer = css({
-  display: 'flex',
-  flexDirection: 'column',
-  backgroundColor: '#EFEFEF',
-  height: '100vh'
 })
 
 export default Home;

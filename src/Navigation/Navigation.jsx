@@ -1,65 +1,92 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
 import { NavLink } from 'react-router-dom';
 import { css } from 'emotion'
-import { elastic as Menu } from 'react-burger-menu'
+import NavigationList from '../NavigationList/NavigationList'
+import BurgerIcon from '@material-ui/icons/Dehaze';
 
-class Navigation extends React.Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <nav className={navBarContainer}>
-        <ul>
-          <li><NavLink exact to='/'>Home</NavLink></li>
-          <li><NavLink exact to='/projects'>Projects</NavLink></li>
-          <li><NavLink exact to='/blog'>Blog</NavLink></li>
-          <li><NavLink exact to='/about'>About</NavLink></li>
-          <li><NavLink exact to='/contact'>Contact</NavLink></li>
-        </ul>
-      </nav>
-    )
-  }
+const styles = {
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
+  },
 };
 
-var styles = {
-  bmBurgerButton: {
-    position: 'fixed',
-    width: '36px',
-    height: '30px',
-    right: '36px',
-    top: '36px'
-  },
-  bmBurgerBars: {
-    background: '#373a47'
-  },
-  bmCrossButton: {
-    height: '24px',
-    width: '24px'
-  },
-  bmCross: {
-    background: '#bdc3c7'
-  },
-  bmMenu: {
-    background: '#373a47',
-    padding: '2.5em 1.5em 0',
-    fontSize: '1.15em'
-  },
-  bmMorphShape: {
-    fill: '#373a47'
-  },
-  bmItemList: {
-    color: '#b8b7ad',
-    padding: '0.8em'
-  },
-  bmItem: {
-    display: 'inline-block'
-  },
-  bmOverlay: {
-    background: 'rgba(0, 0, 0, 0.3)'
+class Navigation extends React.Component {
+  state = {
+    left: false,
+  };
+
+  toggleDrawer = (side, open) => () => {
+    this.setState({
+      [side]: open,
+    });
+  };
+
+  render() {
+    const { classes } = this.props;
+
+    const sideList = (
+      <div className={classes.list}>
+      <NavigationList />
+      </div>
+    );
+
+    return (
+      <div>
+        <Button onClick={this.toggleDrawer('left', true)}><BurgerIcon /></Button>
+        <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
+          <div
+            tabIndex={0}
+            role="button"
+            onClick={this.toggleDrawer('left', false)}
+            onKeyDown={this.toggleDrawer('left', false)}
+          >
+            {sideList}
+          </div>
+        </Drawer>
+      </div>
+    );
   }
 }
+
+Navigation.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Navigation);
+
+
+// import React from 'react';
+// import { NavLink } from 'react-router-dom';
+// import { css } from 'emotion'
+
+// class Navigation extends React.Component {
+//   showSettings(event) {
+//     event.preventDefault();
+//   }
+
+//   render() {
+//     return (
+//       <nav className={navBarContainer}>
+//         <ul>
+//           <li><NavLink exact to='/'>Home</NavLink></li>
+//           <li><NavLink exact to='/projects'>Projects</NavLink></li>
+//           <li><NavLink exact to='/blog'>Blog</NavLink></li>
+//           <li><NavLink exact to='/about'>About</NavLink></li>
+//           <li><NavLink exact to='/contact'>Contact</NavLink></li>
+//         </ul>
+//       </nav>
+//     )
+//   }
+// };
 
 const navBarContainer = css({
   display: 'flex',
@@ -85,8 +112,4 @@ const navBarContainer = css({
   },
 })
 
-const current = css({
-  backgroundColor: '#4CAF50'
-})
-
-export default Navigation;
+// export default Navigation;

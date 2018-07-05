@@ -1,9 +1,9 @@
 import React from 'react';
 import './Global.css';
-import Navigation from './Navigation/Navigation';
 import RouteManager from './RouteManager/RouteManager';
 import { css } from 'emotion'
 import WebFont from 'webfontloader';
+import Header from './Header/Header'
 
 WebFont.load({
   google: {
@@ -13,7 +13,7 @@ WebFont.load({
 
 const App = () => (
   <div className={app}>
-    <Navigation />
+    <Header />
     <RouteManager />
   </div>
 );

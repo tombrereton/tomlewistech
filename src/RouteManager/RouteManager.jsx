@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Navlink,
   Switch,
   Route
 } from 'react-router-dom';

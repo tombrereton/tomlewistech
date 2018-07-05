@@ -10,16 +10,20 @@ const styles = {
   root: {
     flexGrow: 1,
   },
+  flex: {
+    flex: 1,
+  },
 };
 
 function Header(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
+      <AppBar position="static">
         <Toolbar>
-          <Typography variant="title" color="inherit">
-            <Navigation />
+          <Navigation />
+          <Typography variant="subheading" color="inherit" className={classes.flex}>
+            TLT
           </Typography>
         </Toolbar>
       </AppBar>

@@ -8,7 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import { NavLink } from 'react-router-dom';
 import { css } from 'emotion'
 import NavigationList from '../NavigationList/NavigationList'
-import BurgerIcon from '@material-ui/icons/Dehaze';
+import BurgerIcon from '@material-ui/icons/Menu';
 
 const styles = {
   list: {

@@ -15,23 +15,17 @@ import PermMediaIcon from "@material-ui/icons/PermMedia";
 import "./NavigationStyles.css";
 
 const styles = theme => ({
-  root: {
+  listStyle: {
     width: "100%",
-    maxWidth: 360,
+    maxWidth: 300,
     backgroundColor: theme.palette.background.paper
   }
 });
 
-//           <li><NavLink exact to='/'>Home</NavLink></li>
-//           <li><NavLink exact to='/projects'>Projects</NavLink></li>
-//           <li><NavLink exact to='/blog'>Blog</NavLink></li>
-//           <li><NavLink exact to='/about'>About</NavLink></li>
-//           <li><NavLink exact to='/contact'>Contact</NavLink></li>
-
 function SimpleList(props) {
   const { classes } = props;
   return (
-    <div className={classes.root}>
+    <div className={classes.listStyle}>
       <List component="nav">
         <NavLink exact to="/">
           <ListItem button>

@@ -12,7 +12,6 @@ import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
 import FaceIcon from "@material-ui/icons/Face";
 import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
 import PermMediaIcon from "@material-ui/icons/PermMedia";
-import "./NavigationStyles.css";
 
 const styles = theme => ({
   listStyle: {

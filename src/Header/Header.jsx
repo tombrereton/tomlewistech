@@ -19,7 +19,7 @@ function Header(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="primary">
         <Toolbar>
           <Navigation />
           <Typography variant="subheading" color="inherit" className={classes.flex}>

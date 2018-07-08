@@ -8,7 +8,7 @@ import Divider from '@material-ui/core/Divider';
 import { NavLink } from 'react-router-dom';
 import { css } from 'emotion'
 import NavigationList from '../NavigationList/NavigationList'
-import BurgerIcon from '@material-ui/icons/Menu';
+import MenuIcon from '@material-ui/icons/Menu';
 
 const styles = {
   list: {
@@ -41,7 +41,7 @@ class Navigation extends React.Component {
 
     return (
       <div>
-        <Button onClick={this.toggleDrawer('left', true)}><BurgerIcon /></Button>
+        <Button onClick={this.toggleDrawer('left', true)}><MenuIcon /></Button>
         <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
           <div
             tabIndex={0}

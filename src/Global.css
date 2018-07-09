@@ -13,3 +13,10 @@ h1 {
 a {
   text-decoration: none;
 }
+
+#root {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ height: 100vh;
+}

@@ -1,21 +1,24 @@
-import React from 'react';
-import {
-  css
-} from 'react-emotion'
+import React from "react";
+import { css } from "react-emotion";
 
 const homeContainer = css({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  flex: 1,
+  alignItems: 'center',
   zIndex: -1,
-  minHeight: '100vh',
   backgroundColor: "#EEEEEF"
-})
+});
 
-const Home = () => (
-  <div className={homeContainer}>
-    <h1>Welcome to my portfolio website</h1>
-    <p> Feel free to browse around and learn more about me.</p>
-  </div>
-);
-
-
+function Home() {
+  return (
+    <div className={homeContainer}>
+      <h1>Hi I'm Tom</h1>
+      <h1>I'm a web developer</h1>
+      <h1>and software engineer</h1>
+    </div>
+  );
+}
 
 export default Home;

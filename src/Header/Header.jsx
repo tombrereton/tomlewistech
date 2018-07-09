@@ -7,9 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import Navigation from '../Navigation/Navigation';
 
 const styles = {
-  root: {
-    flexGrow: 1,
-  },
   flex: {
     flex: 1,
   },

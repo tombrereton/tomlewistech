@@ -22,7 +22,7 @@ const theme = createMuiTheme({
     text: {
       primary: "#212121",
       secondary: "#757575"
-    }, 
+    },
     divider: "#BDBDBD",
     error: red,
     // Used by `getContrastText()` to maximize the contrast between the background and
@@ -43,16 +43,28 @@ WebFont.load({
 
 const App = () => (
   <div className={app}>
-    <MuiThemeProvider theme={theme}>
-      <Header />
-      <RouteManager />
-    </MuiThemeProvider>
+    <Header />
+    <RouteManager />
   </div>
 );
 
+const breakpoints = [576, 768, 992, 1200];
+
+const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`);
+
 const app = css({
   display: "flex",
-  flexDirection: "column"
+  flexDirection: "column",
+  flex: 1,
+  [mq[1]]: {
+    maxWidth: "50%"
+  },
+  [mq[2]]: {
+    maxWidth: "45%"
+  },
+  [mq[3]]: {
+    maxWidth: "40%"
+  }
 });
 
 export default App;

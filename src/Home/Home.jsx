@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "react-emotion";
+import FloatingButton from "../FloatingButton/FloatingButton";
 
 const homeContainer = css({
   display: 'flex',
@@ -23,6 +24,7 @@ function Home() {
       <h1>Hi I'm Tom</h1>
       <h1>A web developer</h1>
       <h1>and software engineer</h1>
+      <FloatingButton />
     </div>
   );
 }

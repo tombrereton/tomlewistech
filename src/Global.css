@@ -1,3 +1,4 @@
+html,
 body {
   margin: 0px;
   padding: 0px;
@@ -15,8 +16,13 @@ a {
 }
 
 #root {
- display: flex;
- flex-direction: row;
- justify-content: center;
- height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+}
+
+.highlightTitle {
+  background-color: #C5EBF1;
+  margin-top: 0.5em;
 }

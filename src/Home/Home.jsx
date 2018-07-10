@@ -11,11 +11,11 @@ const homeContainer = css({
   zIndex: -1,
   backgroundColor: "#EEEEEF",
   color: "#727373"
-,
-h1: {
-  backgroundColor: "#C5EBF1",
-  marginTop: "0.5em"
-}
+  ,
+  h1: {
+    backgroundColor: "#C5EBF1",
+    marginTop: "0.5em"
+  }
 });
 
 function Home() {
@@ -24,7 +24,7 @@ function Home() {
       <h1>Hi I'm Tom</h1>
       <h1>A web developer</h1>
       <h1>and software engineer</h1>
-      <FloatingButton text="Contact Me"/>
+      <FloatingButton text="Contact Me" />
     </div>
   );
 }

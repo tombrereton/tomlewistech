@@ -9,12 +9,13 @@ const contactContainer = css({
     alignItems: 'flex-start',
     zIndex: -1,
     backgroundColor: "#EEEEEF",
-    color: "#727373"
+    color: "#727373",
+    padding: "1em"
 });
 
 const Contact = () => (
     <div className={contactContainer}>
-        <HighlightText backgroundColor="#C5EBF1" text="Contact Me" type="h1" />
+        <HighlightText color="#C5EBF1" text="Contact Me" type="h1" />
         <p>You can reach me via email: <strong>hello@example.com</strong></p>
     </div>
 );

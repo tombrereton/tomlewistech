@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "react-emotion";
 import FloatingButton from "../FloatingButton/FloatingButton";
 import HighlightText from "../HighlightText/HighlightText";
+import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";
 
 
 const homeContainer = css({
@@ -13,7 +14,8 @@ const homeContainer = css({
   alignItems: 'center',
   zIndex: -1,
   backgroundColor: "#EEEEEF",
-  color: "#727373"
+  color: "#727373",
+  textAlign: 'center'
 });
 
 const section1 = css({
@@ -27,21 +29,43 @@ const section3 = css({
   marginTop: "1em"
 });
 
-function Home() {
-  return (
-    <div className={homeContainer}>
-      <div className={section1}>
-        <HighlightText color="#C5EBF1" text="Hi I'm Tom" type="h1" />
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      section1: "",
+      section2: "",
+      section3: ""
+    }
+  }
+
+  componentDidMount(){
+      {FlamelinkApp.content.get('homePage')
+        .then(homepage => {
+          this.setState({section1: homepage.section1})
+          this.setState({section2: homepage.section2})
+          this.setState({section3: homepage.section3})
+          }
+        )
+      }
+  }
+
+  render() {
+    return (
+      <div className={homeContainer}>
+        <div className={section1}>
+          <HighlightText color="#C5EBF1" text={this.state.section1} type="h1" />
+        </div>
+        <div className={section2}>
+          <HighlightText color="#C5EBF1" text={this.state.section2} type="h1" />
+        </div>
+        <div className={section3}>
+          <HighlightText color="#C5EBF1" text={this.state.section3} type="h1" />
+        </div>
+        <FloatingButton text="Contact Me" />
       </div>
-      <div className={section2}>
-        <HighlightText color="#C5EBF1" text="A web developer" type="h1" />
-      </div>
-      <div className={section3}>
-        <HighlightText color="#C5EBF1" text="and software engineer" type="h1" />
-      </div>
-      <FloatingButton text="Contact Me" />
-    </div>
-  );
+    );
+  }
 }
 
 export default Home;

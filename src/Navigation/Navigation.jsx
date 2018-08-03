@@ -13,6 +13,9 @@ const styles = {
   fullList: {
     width: 'auto',
   },
+  menuIcon :{
+    color: 'white'
+  }
 };
 
 class Navigation extends React.Component {
@@ -37,7 +40,7 @@ class Navigation extends React.Component {
 
     return (
       <div>
-        <Button onClick={this.toggleDrawer('left', true)}><MenuIcon /></Button>
+        <Button onClick={this.toggleDrawer('left', true)}><MenuIcon className={classes.menuIcon}/></Button>
         <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
           <div
             tabIndex={0}

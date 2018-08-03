@@ -1,9 +1,9 @@
-html,
-body {
+html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
-  font-family: 'Quicksand', sans-serif
+  font-family: 'Quicksand', sans-serif;
+  background-color: #EEEEEF;
 }
 
 h1 {

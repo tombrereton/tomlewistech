@@ -7,8 +7,6 @@ const contactContainer = css({
   flexDirection: "column",
   flex: 1,
   alignItems: "flex-start",
-  zIndex: -1,
-  backgroundColor: "#EEEEEF",
   color: "#727373",
   padding: "1em"
 });

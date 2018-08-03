@@ -7,9 +7,7 @@ const aboutContainer = css({
     flexDirection: 'column',
     flex: 1,
     alignItems: 'flex-start',
-    zIndex: -1,
     padding: "1em",
-    backgroundColor: "#EEEEEF",
     color: "#727373"
 });
 

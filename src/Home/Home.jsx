@@ -1,9 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { css } from "react-emotion";
 import Media from "react-media";
 import FloatingButton from "../FloatingButton/FloatingButton";
 import HighlightText from "../HighlightText/HighlightText";
 import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";
+import {Link} from '@material-ui/icons'
 
 const homeContainer = css({
   display: "flex",
@@ -12,10 +14,18 @@ const homeContainer = css({
   flex: 1,
   padding: "1em",
   alignItems: "center",
-  zIndex: -1,
-  backgroundColor: "#EEEEEF",
   color: "#727373",
   textAlign: "center"
+});
+
+const parentSectionIphoneSE = css({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center"
+});
+
+const contactButton = css({
+  zIndex: 1
 });
 
 const section1 = css({});
@@ -26,12 +36,6 @@ const section2 = css({
 
 const section3 = css({
   marginTop: "1em"
-});
-
-const parentSectionIphoneSE = css({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center"
 });
 
 class Home extends React.Component {
@@ -82,7 +86,7 @@ class Home extends React.Component {
         <div className={section3}>
           <HighlightText color="#C5EBF1" text="software engineer." type="h1" />
         </div>
-        <FloatingButton text="Contact Me" />
+          <FloatingButton text="Contact Me" />
       </div>
     );
   }

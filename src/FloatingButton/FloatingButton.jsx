@@ -4,7 +4,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer";
 import { Slide } from "@material-ui/core";
-import {BorderLeft} from '@material-ui/icons'
+import {Link} from 'react-router-dom'
 
 const styles = {
   button: {
@@ -26,6 +26,8 @@ function ContactButton(props) {
         aria-label="delete"
         className={classes.button}
         color="secondary"
+        component={Link}
+        to="/contact"
       >
         <QuestionAnswerIcon />
         <span className={classes.buttonText}>{props.text}</span>

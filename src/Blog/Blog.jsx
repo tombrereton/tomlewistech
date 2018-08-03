@@ -8,8 +8,6 @@ const blogContainer = css({
     flex: 1,
     padding: "1em",
     alignItems: 'flex-start',
-    zIndex: -1,
-    backgroundColor: "#EEEEEF",
     color: "#727373"
 });
 

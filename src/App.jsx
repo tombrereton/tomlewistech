@@ -4,7 +4,7 @@ import RouteManager from "./RouteManager/RouteManager";
 import { css } from "emotion";
 import WebFont from "webfontloader";
 import Header from "./Header/Header";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme } from "@material-ui/core/styles";
 import red from "@material-ui/core/colors/red";
 
 // All the following keys are optional.

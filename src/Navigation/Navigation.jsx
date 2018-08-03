@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import { NavLink } from 'react-router-dom';
-import { css } from 'emotion'
 import NavigationList from '../NavigationList/NavigationList'
 import MenuIcon from '@material-ui/icons/Menu';
 
@@ -62,3 +58,5 @@ Navigation.propTypes = {
 };
 
 export default withStyles(styles)(Navigation);
+
+

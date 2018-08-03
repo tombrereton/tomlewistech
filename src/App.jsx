@@ -48,23 +48,10 @@ const App = () => (
   </div>
 );
 
-const breakpoints = [576, 768, 992, 1200];
-
-const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`);
-
 const app = css({
   display: "flex",
   flexDirection: "column",
   flex: 1,
-  [mq[1]]: {
-    maxWidth: "50%"
-  },
-  [mq[2]]: {
-    maxWidth: "45%"
-  },
-  [mq[3]]: {
-    maxWidth: "40%"
-  }
 });
 
 export default App;

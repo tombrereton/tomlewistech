@@ -24,10 +24,6 @@ const parentSectionIphoneSE = css({
   alignItems: "center"
 });
 
-const contactButton = css({
-  zIndex: 1
-});
-
 const section1 = css({});
 
 const section2 = css({
@@ -44,7 +40,8 @@ class Home extends React.Component {
     this.state = {
       section1: "",
       section2: "",
-      section3: ""
+      section3: "",
+      section4: ""
     };
   }
 

@@ -10,7 +10,15 @@ const styles = {
     maxWidth: 300,
     display: "flex",
     justifyContent: "space-between",
-    paddingRight: "2em",
+    paddingRight: "2em"
+  },
+  linkWeb: {
+    textDecoration: "none",
+    color: "#727373",
+    "&:hover": {
+      textDecoration: "underline",
+      textDecorationColor: "#a2a2a2"
+    }
   }
 };
 
@@ -19,27 +27,27 @@ function NavigationWeb(props) {
   return (
     <div className={classes.navigationWeb}>
       <NavLink exact to="/">
-        <Typography variant="subheading" color="inherit" className={classes.header}>
+        <Typography variant="subheading" color="inherit" className={classes.linkWeb}>
           Home
         </Typography>
       </NavLink>
       <NavLink exact to="/projects">
-        <Typography variant="subheading" color="inherit" className={classes.header}>
+        <Typography variant="subheading" color="inherit" className={classes.linkWeb}>
           Projects
         </Typography>
       </NavLink>
       <NavLink exact to="/blog">
-        <Typography variant="subheading" color="inherit" className={classes.header}>
+        <Typography variant="subheading" color="inherit" className={classes.linkWeb}>
           Blog
         </Typography>
       </NavLink>
       <NavLink exact to="/about">
-        <Typography variant="subheading" color="inherit" className={classes.header}>
+        <Typography variant="subheading" color="inherit" className={classes.linkWeb}>
           About
         </Typography>
       </NavLink>
       <NavLink exact to="/contact">
-        <Typography variant="subheading" color="inherit" className={classes.header}>
+        <Typography variant="subheading" color="inherit" className={classes.linkWeb}>
           Contact
         </Typography>
       </NavLink>

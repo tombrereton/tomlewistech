@@ -4,12 +4,19 @@ import RouteManager from "./RouteManager/RouteManager";
 import { css } from "emotion";
 import WebFont from "webfontloader";
 import Header from "./Header/Header";
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import red from "@material-ui/core/colors/red";
 
 // All the following keys are optional.
 // We try our best to provide a great default value.
-const theme = createMuiTheme({
+const THEME = createMuiTheme({
+  typography: {
+    fontFamily: '"Quicksand", "Helvetica", "Arial", sans-serif',
+    fontSize: 14,
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500
+  },
   palette: {
     primary: {
       main: "#03A9F4",
@@ -42,16 +49,18 @@ WebFont.load({
 });
 
 const App = () => (
-  <div className={app}>
-    <Header />
-    <RouteManager />
-  </div>
+  <MuiThemeProvider theme={THEME}>
+    <div className={app}>
+      <Header />
+      <RouteManager />
+    </div>
+  </MuiThemeProvider>
 );
 
 const app = css({
   display: "flex",
   flexDirection: "column",
-  flex: 1,
+  flex: 1
 });
 
 export default App;

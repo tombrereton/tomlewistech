@@ -14,7 +14,9 @@ const styles = {
     width: "auto"
   },
   menuIcon: {
-    color: "#727373"
+    color: "#727373",
+    width: 40,
+    minWidth: 40
   }
 };
 
@@ -40,7 +42,7 @@ class Navigation extends React.Component {
 
     return (
       <div>
-        <Button onClick={this.toggleDrawer("left", true)}>
+        <Button onClick={this.toggleDrawer("left", true)} className={classes.menuIcon}>
           <MenuIcon className={classes.menuIcon} />
         </Button>
         <Drawer open={this.state.left} onClose={this.toggleDrawer("left", false)}>

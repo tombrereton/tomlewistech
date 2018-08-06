@@ -1,6 +1,5 @@
 import React from "react";
 import { css } from "react-emotion";
-import Media from "react-media";
 import FloatingButton from "../FloatingButton/FloatingButton";
 import HighlightText from "../HighlightText/HighlightText";
 import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";
@@ -57,27 +56,9 @@ class Home extends React.Component {
         <div className={section1}>
           <HighlightText color="#C5EBF1" text="Hi I'm Tom." type="h1" />
         </div>
-
-        <Media query="(max-width: 320px)">
-          {isIphoneSE =>
-            isIphoneSE ? (
-              <div className={parentSectionIphoneSE}>
-                <div className={section2}>
-                  <HighlightText color="#C5EBF1" text="A web developer" type="h1" />
-                </div>
-                <div className={section3}>
-                  <HighlightText color="#C5EBF1" text="and" type="h1" />
-                </div>
-              </div>
-            ) : (
-              <div>
-                <div className={section2}>
-                  <HighlightText color="#C5EBF1" text="A web developer and" type="h1" />
-                </div>
-              </div>
-            )
-          }
-        </Media>
+        <div className={section2}>
+          <HighlightText color="#C5EBF1" text="A web developer &" type="h1" />
+        </div>
         <div className={section3}>
           <HighlightText color="#C5EBF1" text="software engineer." type="h1" />
         </div>

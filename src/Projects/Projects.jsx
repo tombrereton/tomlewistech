@@ -1,21 +1,51 @@
 import React from "react";
 import HighlightText from "../HighlightText/HighlightText";
-import { css } from "react-emotion";
+import { Grid, Card } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
+import ProjectCard from "../ProjectCard/ProjectCard";
 
-const projectContainer = css({
-  display: "flex",
-  flexDirection: "column",
-  flex: 1,
-  padding: "1em",
-  alignItems: "flex-start",
-  color: "#727373"
-});
+const styles = {
+  projectContainer: {
+    padding: "1em",
+    margin: 0,
+    width: '100%'
+  },
+  title: {
+    paddingBottom: "2em"
+  }
 
-const Projects = () => (
-  <div className={projectContainer}>
-    <HighlightText color="#C5EBF1" text="Projects" type="h1" />
-    <p>Coming soon.</p>
-  </div>
-);
+};
 
-export default Projects;
+class Projects extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { classes } = this.props;
+    return (
+      <Grid
+        container
+        spacing={16}
+        direction="column"
+        justify="flex-start"
+        alignItems="center"
+        wrap="nowrap"
+        className={classes.projectContainer}
+      >
+      <div className={classes.title}>
+        <HighlightText color="#C5EBF1" text="Projects" type="h1" />
+      </div>
+
+        <Grid item xs={12}>
+          <ProjectCard />
+        </Grid>
+        <Grid item xs={12}>
+          <ProjectCard />
+        </Grid>
+      </Grid>
+    );
+  }
+}
+
+export default withStyles(styles)(Projects);

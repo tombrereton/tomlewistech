@@ -15,11 +15,6 @@ const homeContainer = css({
   textAlign: "center"
 });
 
-const parentSectionIphoneSE = css({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center"
-});
 
 const section1 = css({});
 

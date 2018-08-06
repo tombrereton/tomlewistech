@@ -1,6 +1,6 @@
 import React from "react";
 import HighlightText from "../HighlightText/HighlightText";
-import { Grid, Card } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { NavLink } from "react-router-dom";
@@ -10,7 +10,7 @@ const styles = {
   projectContainer: {
     padding: "1em",
     margin: 0,
-    width: "100%",
+    width: "100%"
   },
   title: {
     paddingBottom: "2em"
@@ -32,7 +32,6 @@ class Projects extends React.Component {
     FlamelinkApp.content
       .get("project")
       .then(p => {
-        console.log(p)
         for (var property in p) {
           let project = p[property];
           this.setState({ projects: this.state.projects.concat([project]) });

@@ -45,7 +45,7 @@ class Project extends React.Component {
   componentWillMount() {
     let slug = this.props.match.params.slug
     FlamelinkApp.content
-      .getByField("project", "slug", slug)
+      .getByField("post", "slug", slug)
       .then(p => {
         for (const prop in p) {
           this.setState({ project: p[prop] });
@@ -74,7 +74,7 @@ class Project extends React.Component {
         className={classes.projectContainer}
       >
         <Grid item xs={12} sm={8} md={6} className={classes.title}>
-          <HighlightText color="#C5EBF1" text={this.state.project["projectTitle"]} type="h1" />
+          <HighlightText color="#C5EBF1" text={this.state.project["postTitle"]} type="h1" />
           <Typography variant="subheading">{this.state.project["author"]}</Typography>
           <Typography variant="subheading">Tags: {this.state.project["tags"]}</Typography>
         </Grid>

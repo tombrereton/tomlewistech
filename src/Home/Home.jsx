@@ -1,11 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { css } from "react-emotion";
 import Media from "react-media";
 import FloatingButton from "../FloatingButton/FloatingButton";
 import HighlightText from "../HighlightText/HighlightText";
 import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";
-import {Link} from '@material-ui/icons'
 
 const homeContainer = css({
   display: "flex",
@@ -83,7 +81,7 @@ class Home extends React.Component {
         <div className={section3}>
           <HighlightText color="#C5EBF1" text="software engineer." type="h1" />
         </div>
-          <FloatingButton text="Contact Me" />
+        <FloatingButton text="Contact Me" />
       </div>
     );
   }

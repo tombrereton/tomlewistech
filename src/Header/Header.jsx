@@ -6,7 +6,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import MobileNavigation from "../Navigation/Navigation";
 import NavigationWeb from "../NavigationWeb/NavigationWeb";
-import logoInverted2 from "./logoInverted2.svg";
+import logoInverted3 from "./logoInverted3.svg";
 import { NavLink } from "react-router-dom";
 import Media from "react-media";
 
@@ -42,7 +42,7 @@ function Header(props) {
           </NavLink>
           <Media query="(min-width: 550px)" render={() => <NavigationWeb />} />
           <NavLink exact to="/">
-            <img src={logoInverted2} height="40" alt="logo" />
+            <img src={logoInverted3} height="40" alt="logo" />
           </NavLink>
         </Toolbar>
       </AppBar>

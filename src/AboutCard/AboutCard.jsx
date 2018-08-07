@@ -14,15 +14,14 @@ const styles = {
   cropContainer: {
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     width: 100,
     height: 100,
     overflow: "hidden",
     borderRadius: "50%",
-    img: {
-      display: "inline",
+    "& img": {
       margin: "0 auto",
       height: "100%",
-      width: "auto"
     }
   },
   skillContainer: {
@@ -34,7 +33,7 @@ const styles = {
   }
 };
 
-class ProjectCard extends React.Component {
+class AboutCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -74,8 +73,8 @@ class ProjectCard extends React.Component {
   }
 }
 
-ProjectCard.propTypes = {
+AboutCard.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(ProjectCard);
+export default withStyles(styles)(AboutCard);

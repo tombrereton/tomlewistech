@@ -42,7 +42,7 @@ class Project extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     let slug = this.props.match.params.slug
     FlamelinkApp.content
       .getByField("project", "slug", slug)

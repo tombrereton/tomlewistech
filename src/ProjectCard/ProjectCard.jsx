@@ -36,7 +36,7 @@ class ProjectCard extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     FlamelinkApp.storage
       .getURL(this.props.image)
       .then(image => {

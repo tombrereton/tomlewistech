@@ -42,16 +42,16 @@ class Blog extends React.Component {
 
   render() {
     const { classes } = this.props;
-    let projects = this.state.posts.map((project, index) => {
+    let posts = this.state.posts.map((posts, index) => {
       return (
         <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem}>
-          <NavLink exact to={"/blog/post/" + project.slug}>
+          <NavLink exact to={"/blog/post/" + posts.slug}>
             <BlogCard
               key={index}
-              postTitle={project.postTitle}
-              tags={project.tags}
-              summary={project.summary}
-              image={project.images[0]}
+              postTitle={posts.postTitle}
+              tags={posts.tags}
+              summary={posts.summary}
+              image={posts.images[0]}
             />
           </NavLink>
         </Grid>
@@ -70,7 +70,7 @@ class Blog extends React.Component {
         <div className={classes.title}>
           <HighlightText color="#C5EBF1" text="Blog" type="h1" />
         </div>
-        {projects}
+        {posts}
       </Grid>
     );
   }

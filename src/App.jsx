@@ -6,8 +6,7 @@ import WebFont from "webfontloader";
 import Header from "./Header/Header";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
 import red from "@material-ui/core/colors/red";
-import ReactGA from 'react-ga';
-ReactGA.initialize('UA-123493414-1');
+
 
 // All the following keys are optional.
 // We try our best to provide a great default value.

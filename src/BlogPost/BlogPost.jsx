@@ -64,6 +64,14 @@ class Project extends React.Component {
         </div>
       );
     }
+
+    const disqusShortname = 'shorthand' + this.props.match.param.slug;
+    const disqusConfig = {
+      url: this.props.match.param.slug,
+      identifier: this.state.project["id"],
+      title: this.state.project["postTitle"],
+    }
+
     return (
       <Grid
         container
@@ -83,11 +91,17 @@ class Project extends React.Component {
             Published: {new Date(this.state.project["datePublished"]).toDateString()},
             Last Modified: {new Date(this.state.project["dateLastModified"]).toDateString()}
           </Typography>
+
+          <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
+            Comments
+          </Disqus.CommentCount>
         </Grid>
         <Grid item xs={12} sm={8} md={6} className={classes.gridItem}>
           <Paper className={classes.paperItem}>
             <ReactMarkdown source={this.state.project["content"]} />
           </Paper>
+
+          <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
         </Grid>
       </Grid>
     );

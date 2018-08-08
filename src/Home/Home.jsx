@@ -2,6 +2,8 @@ import React from "react";
 import { css } from "react-emotion";
 import FloatingButton from "../ContactButon/ContactButton";
 import HighlightText from "../HighlightText/HighlightText";
+import HomeCard from "../HomeCard/HomeCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const homeContainer = css({
   display: "flex",

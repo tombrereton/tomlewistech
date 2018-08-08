@@ -38,7 +38,7 @@ class Contact extends React.Component {
           <HighlightText color="#C5EBF1" text="Contact Me" type="h1" />
         </div>
         <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem}>
-          <ContactExternalButton externalUrl="mailto:tom@tomlewis.tech" text="Send Email">
+          <ContactExternalButton externalUrl="mailto:tom@tomlewis.tech" text="Email">
             <FontAwesomeIcon icon={['fa', 'envelope']} />
           </ContactExternalButton>
         </Grid>

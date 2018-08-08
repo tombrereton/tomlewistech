@@ -42,16 +42,15 @@ class Blog extends React.Component {
 
   render() {
     const { classes } = this.props;
-    let posts = this.state.posts.map((posts, index) => {
+    let posts = this.state.posts.map((post) => {
       return (
-        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem}>
-          <NavLink exact to={"/blog/post/" + posts.slug}>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem} key={post.id}>
+          <NavLink exact to={"/blog/post/" + post.slug}>
             <BlogCard
-              key={index}
-              postTitle={posts.postTitle}
-              tags={posts.tags}
-              summary={posts.summary}
-              image={posts.images[0]}
+              postTitle={post.postTitle}
+              tags={post.tags}
+              summary={post.summary}
+              image={post.images[0]}
             />
           </NavLink>
         </Grid>

@@ -64,9 +64,9 @@ class AboutCard extends React.Component {
     return (
       <div className={classes.skillContainer}>
         <div className={classes.cropContainer}>
-          <img src={this.state.image} />
+          <img src={this.state.image} alt={"Image of" + this.props.skillTitle} />
         </div>
-        <Typography variant="title" style={{paddingTop: "0.5em", paddingBottom: "0.3em"}}>{this.props.skillTitle}</Typography>
+        <Typography variant="title" style={{ paddingTop: "0.5em", paddingBottom: "0.3em" }}>{this.props.skillTitle}</Typography>
         <Typography variant="subheading">{this.props.skillDescription}</Typography>
       </div>
     );

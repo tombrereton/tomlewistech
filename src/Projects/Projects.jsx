@@ -42,12 +42,11 @@ class Projects extends React.Component {
 
   render() {
     const { classes } = this.props;
-    let projects = this.state.projects.map((project, index) => {
+    let projects = this.state.projects.map((project) => {
       return (
-        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem}>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem} key={project.id}>
           <NavLink exact to={"/projects/project/" + project.slug}>
             <ProjectCard
-              key={index}
               projectTitle={project.projectTitle}
               tags={project.tags}
               summary={project.summary}

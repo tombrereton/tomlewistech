@@ -1,4 +1,5 @@
 import React from "react";
+import Disqus from 'disqus-react';
 import { ClipLoader } from "react-spinners";
 import { withStyles } from "@material-ui/core/styles";
 import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";

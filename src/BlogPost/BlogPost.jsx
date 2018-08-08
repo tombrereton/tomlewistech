@@ -53,17 +53,18 @@ class Project extends React.Component {
         for (const prop in p) {
           this.setState({ project: p[prop] });
         }
+        const canonicalUrl = "https://tomlewis.tech/blog/post/" + slug
+        this.setState({ disqusShortname: slug });
+        const disqusConfig = {
+          url: canonicalUrl,
+          identifier: this.state.project.id,
+          title: this.state.project["postTitle"],
+        }
+        this.setState({ disqusConfig: disqusConfig })
         this.setState({ loading: false });
       })
       .catch(e => console.log("Error getting project:", e));
 
-    this.setState({ disqusShortname: 'shortname' + slug });
-    const disqusConfig = {
-      url: slug,
-      identifier: this.state.project["id"],
-      title: this.state.project["postTitle"],
-    }
-    this.setState({disqusConfig: disqusConfig})
   }
 
   render() {

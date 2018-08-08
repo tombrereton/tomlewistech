@@ -45,6 +45,18 @@ class Project extends React.Component {
     };
   }
 
+  configureDisqus(slug) {
+    const canonicalUrl = "https://tomlewis.tech/blog/post/" + slug
+    this.setState({ disqusShortname: 'tomlewis-tech' });
+    const disqusConfig = {
+      url: canonicalUrl,
+      identifier: this.state.project.id,
+      title: this.state.project["postTitle"],
+    }
+    this.setState({ disqusConfig: disqusConfig })
+
+  }
+
   componentDidMount() {
     let slug = this.props.match.params.slug
     FlamelinkApp.content
@@ -53,14 +65,7 @@ class Project extends React.Component {
         for (const prop in p) {
           this.setState({ project: p[prop] });
         }
-        const canonicalUrl = "https://tomlewis.tech/blog/post/" + slug
-        this.setState({ disqusShortname: slug });
-        const disqusConfig = {
-          url: canonicalUrl,
-          identifier: this.state.project.id,
-          title: this.state.project["postTitle"],
-        }
-        this.setState({ disqusConfig: disqusConfig })
+        this.configureDisqus(slug)
         this.setState({ loading: false });
       })
       .catch(e => console.log("Error getting project:", e));

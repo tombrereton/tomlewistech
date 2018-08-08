@@ -39,7 +39,9 @@ class Project extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      project: null
+      project: null,
+      disqusShortname: "",
+      disqusConfig: null
     };
   }
 
@@ -54,6 +56,14 @@ class Project extends React.Component {
         this.setState({ loading: false });
       })
       .catch(e => console.log("Error getting project:", e));
+
+    this.setState({ disqusShortname: 'shortname' + slug });
+    const disqusConfig = {
+      url: slug,
+      identifier: this.state.project["id"],
+      title: this.state.project["postTitle"],
+    }
+    this.setState({disqusConfig: disqusConfig})
   }
 
   render() {
@@ -64,13 +74,6 @@ class Project extends React.Component {
           <ClipLoader color={"#474973"} loading={this.state.loading} />
         </div>
       );
-    }
-
-    const disqusShortname = 'shorthand' + this.props.match.param.slug;
-    const disqusConfig = {
-      url: this.props.match.param.slug,
-      identifier: this.state.project["id"],
-      title: this.state.project["postTitle"],
     }
 
     return (
@@ -93,7 +96,7 @@ class Project extends React.Component {
             Last Modified: {new Date(this.state.project["dateLastModified"]).toDateString()}
           </Typography>
 
-          <Disqus.CommentCount shortname={disqusShortname} config={disqusConfig}>
+          <Disqus.CommentCount shortname={this.state.disqusShortname} config={this.state.disqusConfig}>
             Comments
           </Disqus.CommentCount>
         </Grid>
@@ -102,7 +105,7 @@ class Project extends React.Component {
             <ReactMarkdown source={this.state.project["content"]} />
           </Paper>
 
-          <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+          <Disqus.DiscussionEmbed shortname={this.state.disqusShortname} config={this.state.disqusConfig} />
         </Grid>
       </Grid>
     );

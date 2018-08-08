@@ -25,12 +25,6 @@ const contactContainer = css({
 });
 
 
-const app = css({
-  display: "flex",
-  flexDirection: "column",
-  flex: 1,
-});
-
 const Contact = () => (
   <div className={contactContainer}>
     <HighlightText color="#C5EBF1" text="Contact Me" type="h1" />

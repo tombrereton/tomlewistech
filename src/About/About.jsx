@@ -47,11 +47,10 @@ class About extends React.Component {
 
   render() {
     const { classes } = this.props;
-    let skills = this.state.skills.map((skill, index) => {
+    let skills = this.state.skills.map((skill) => {
       return (
-        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem}>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem} key={skill.id}>
           <AboutCard
-            key={index}
             skillTitle={skill.skillTitle}
             skillDescription={skill.skillDescription}
             image={skill.images[0]}
@@ -72,8 +71,8 @@ class About extends React.Component {
         <div className={classes.title}>
           <HighlightText color="#C5EBF1" text="About Me" type="h1" />
         </div>
-        <img className={classes.portraitContainer} src={portraitPhoto} />
-        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem} justify="center">
+        <img className={classes.portraitContainer} src={portraitPhoto} alt={"A portrait of Tom Lewis"} />
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem}>
           <Typography style={{paddingBottom: "1em"}} variant="subheading">
             I'm a software engineer who loves design and building things. I primarily use .NET Core,
             React, and Python to develop and Microsoft Azure for cloud services.          </Typography>

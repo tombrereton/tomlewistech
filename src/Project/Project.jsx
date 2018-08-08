@@ -3,7 +3,7 @@ import { ClipLoader } from "react-spinners";
 import { withStyles } from "@material-ui/core/styles";
 import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";
 import ReactMarkdown from "react-markdown";
-import { Paper, Typography, FormHelperText } from "@material-ui/core";
+import { Paper, Typography } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import HighlightText from "../HighlightText/HighlightText";
 

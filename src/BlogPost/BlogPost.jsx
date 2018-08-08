@@ -39,7 +39,7 @@ class Project extends React.Component {
     super(props);
     this.state = {
       loading: true,
-      project: null,
+      post: null,
       disqusShortname: "",
       disqusConfig: null
     };
@@ -50,11 +50,10 @@ class Project extends React.Component {
     this.setState({ disqusShortname: 'tomlewis-tech' });
     const disqusConfig = {
       url: canonicalUrl,
-      identifier: this.state.project.id,
-      title: this.state.project["postTitle"],
+      identifier: this.state.post.id,
+      title: this.state.post["postTitle"],
     }
     this.setState({ disqusConfig: disqusConfig })
-
   }
 
   componentDidMount() {
@@ -63,7 +62,7 @@ class Project extends React.Component {
       .getByField("post", "slug", slug)
       .then(p => {
         for (const prop in p) {
-          this.setState({ project: p[prop] });
+          this.setState({ post: p[prop] });
         }
         this.configureDisqus(slug)
         this.setState({ loading: false });
@@ -92,14 +91,14 @@ class Project extends React.Component {
         className={classes.projectContainer}
       >
         <Grid item xs={12} sm={8} md={6} className={classes.title}>
-          <HighlightText color="#C5EBF1" text={this.state.project["postTitle"]} type="h1" />
-          <Typography variant="subheading">{this.state.project["author"]}</Typography>
-          <Typography variant="subheading">Tags: {this.state.project["tags"]}</Typography>
+          <HighlightText color="#C5EBF1" text={this.state.post["postTitle"]} type="h1" />
+          <Typography variant="subheading">{this.state.post["author"]}</Typography>
+          <Typography variant="subheading">Tags: {this.state.post["tags"]}</Typography>
         </Grid>
         <Grid item xs={12} sm={8} md={6} className={classes.title}>
           <Typography variant="subheading">
-            Published: {new Date(this.state.project["datePublished"]).toDateString()},
-            Last Modified: {new Date(this.state.project["dateLastModified"]).toDateString()}
+            Published: {new Date(this.state.post["datePublished"]).toDateString()},
+            Last Modified: {new Date(this.state.post["dateLastModified"]).toDateString()}
           </Typography>
 
           <Disqus.CommentCount shortname={this.state.disqusShortname} config={this.state.disqusConfig}>
@@ -108,7 +107,7 @@ class Project extends React.Component {
         </Grid>
         <Grid item xs={12} sm={8} md={6} className={classes.gridItem}>
           <Paper className={classes.paperItem}>
-            <ReactMarkdown source={this.state.project["content"]} />
+            <ReactMarkdown source={this.state.post["content"]} />
           </Paper>
 
           <Disqus.DiscussionEmbed shortname={this.state.disqusShortname} config={this.state.disqusConfig} />

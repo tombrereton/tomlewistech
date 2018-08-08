@@ -1,4 +1,5 @@
 import React from "react";
+import Disqus from 'disqus-react';
 import { ClipLoader } from "react-spinners";
 import { withStyles } from "@material-ui/core/styles";
 import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";
@@ -42,6 +43,17 @@ class Project extends React.Component {
     };
   }
 
+  configureDisqus(slug) {
+    const canonicalUrl = "https://tomlewis.tech/projects/project/" + slug
+    this.setState({ disqusShortname: 'tomlewis-tech' });
+    const disqusConfig = {
+      url: canonicalUrl,
+      identifier: this.state.project.id,
+      title: this.state.project["projectTitle"],
+    }
+    this.setState({ disqusConfig: disqusConfig })
+  }
+
   componentDidMount() {
     let slug = this.props.match.params.slug
     FlamelinkApp.content
@@ -50,6 +62,7 @@ class Project extends React.Component {
         for (const prop in p) {
           this.setState({ project: p[prop] });
         }
+        this.configureDisqus(slug);
         this.setState({ loading: false });
       })
       .catch(e => console.log("Error getting project:", e));
@@ -83,11 +96,15 @@ class Project extends React.Component {
             Published: {new Date(this.state.project["datePublished"]).toDateString()},
             Last Modified: {new Date(this.state.project["dateLastModified"]).toDateString()}
           </Typography>
+          <Disqus.CommentCount shortname={this.state.disqusShortname} config={this.state.disqusConfig}>
+            Comments
+          </Disqus.CommentCount>
         </Grid>
         <Grid item xs={12} sm={8} md={6} className={classes.gridItem}>
           <Paper className={classes.paperItem}>
             <ReactMarkdown source={this.state.project["content"]} />
           </Paper>
+          <Disqus.DiscussionEmbed shortname={this.state.disqusShortname} config={this.state.disqusConfig} />
         </Grid>
       </Grid>
     );

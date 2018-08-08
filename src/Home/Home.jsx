@@ -1,8 +1,7 @@
 import React from "react";
 import { css } from "react-emotion";
-import FloatingButton from "../FloatingButton/FloatingButton";
+import FloatingButton from "../ContactButon/ContactButton";
 import HighlightText from "../HighlightText/HighlightText";
-import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";
 
 const homeContainer = css({
   display: "flex",
@@ -15,7 +14,6 @@ const homeContainer = css({
   textAlign: "center"
 });
 
-
 const section1 = css({});
 
 const section2 = css({
@@ -27,23 +25,6 @@ const section3 = css({
 });
 
 class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      section1: "",
-      section2: "",
-      section3: "",
-      section4: ""
-    };
-  }
-
-  componentDidMount() {
-    FlamelinkApp.content.get("homePage").then(homepage => {
-      this.setState({ section1: homepage.section1 });
-      this.setState({ section2: homepage.section2 });
-      this.setState({ section3: homepage.section3 });
-    });
-  }
 
   render() {
     return (

@@ -1,40 +1,60 @@
 import React from "react";
 import HighlightText from "../HighlightText/HighlightText";
-import { css } from "react-emotion";
+import { Grid } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
+import ContactExternalButton from "../ContactExternalButton/ContactExternalButton";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const breakpoints = [576, 768, 992, 1200];
-
-const mq = breakpoints.map(bp => `@media (min-width: ${bp}px)`);
-
-const contactContainer = css({
-  display: "flex",
-  flexDirection: "column",
-  flex: 1,
-  alignItems: "flex-start",
-  color: "#727373",
-  padding: "1em",
-  [mq[0]]: {
-    maxWidth: "50%",
+const styles = {
+  projectContainer: {
+    padding: "1em",
+    margin: 0,
+    width: "100%"
   },
-  [mq[2]]: {
-    maxWidth: "45%"
+  title: {
+    paddingBottom: "2em"
   },
-  [mq[3]]: {
-    maxWidth: "40%"
+  gridItem: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
   }
-});
+};
 
+class Contact extends React.Component {
+  render() {
+    const { classes } = this.props;
+    return (
+      <Grid
+        container
+        spacing={40}
+        direction="column"
+        justify="center"
+        alignItems="center"
+        wrap="nowrap"
+        className={classes.projectContainer}
+      >
+        <div className={classes.title}>
+          <HighlightText color="#C5EBF1" text="Contact Me" type="h1" />
+        </div>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem}>
+          <ContactExternalButton externalUrl="mailto:tom@tomlewis.tech" text="Send Email">
+            <FontAwesomeIcon icon={['fa', 'envelope']} />
+          </ContactExternalButton>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem}>
+          <ContactExternalButton externalUrl="https://github.com/tombrereton" text="Github">
+            <FontAwesomeIcon icon={['fab', 'github']} />
+          </ContactExternalButton>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3} className={classes.gridItem}>
+          <ContactExternalButton externalUrl="https://www.linkedin.com/in/tbrereton/" text="Linkedin">
+            <FontAwesomeIcon icon={['fab', 'linkedin']} />
+          </ContactExternalButton>
+        </Grid>
+      </Grid>
+    );
+  }
+}
 
-const Contact = () => (
-  <div className={contactContainer}>
-    <HighlightText color="#C5EBF1" text="Contact Me" type="h1" />
-    <p>
-      You can reach me via email: 
-    </p>
-    <a href="mailto:tom@tomlewis.tech?Subject=Website%20Project" target="_top">
-      tom@tomlewis.tech
-    </a>
-  </div>
-);
-
-export default Contact;
+export default withStyles(styles)(Contact);

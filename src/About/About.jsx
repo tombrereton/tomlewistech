@@ -16,7 +16,7 @@ const styles = {
     paddingBottom: "2em"
   },
   subHeading: {
-    padding: "1em"
+    paddingTop: "2em"
   },
   gridItem: {
     width: "100%",

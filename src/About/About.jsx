@@ -15,8 +15,12 @@ const styles = {
   title: {
     paddingBottom: "2em"
   },
+  subHeading: {
+    padding: "1em"
+  },
   gridItem: {
-    width: "100%"
+    width: "100%",
+    justifyContent: "center"
   },
   portraitContainer: {
     maxWidth: 300,
@@ -89,6 +93,9 @@ class About extends React.Component {
             CSS-in-JS, and Google Firebase such as this website.
           </Typography>
         </Grid>
+        <div className={classes.subHeading}>
+          <HighlightText color="#C5EBF1" text="Skills & Services" type="h3" />
+        </div>
         {skills}
       </Grid>
     );

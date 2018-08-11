@@ -38,3 +38,10 @@ pre {
   tab-size: 4;
   word-wrap: normal;
 }
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

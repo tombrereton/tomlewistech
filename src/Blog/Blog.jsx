@@ -28,7 +28,7 @@ class Blog extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     FlamelinkApp.content
       .get("post")
       .then(p => {

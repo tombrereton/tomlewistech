@@ -27,3 +27,19 @@ a {
   background-color: #C5EBF1;
   margin-top: 0.5em;
 }
+
+
+pre:hover,
+pre:focus {
+  width: min-content;
+}
+
+pre {
+  background-color: #2d2d2d;
+  color: #eeeeef;
+  padding: 1em;
+  border-radius: 5px;
+  font-family: monospace, monospace;
+  tab-size: 4;
+}
+

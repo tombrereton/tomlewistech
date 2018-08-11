@@ -1,12 +1,13 @@
 import React from "react";
-import Disqus from 'disqus-react';
+import Disqus from "disqus-react";
 import { ClipLoader } from "react-spinners";
 import { withStyles } from "@material-ui/core/styles";
 import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";
-import ReactMarkdown from "react-markdown";
 import { Paper, Typography } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import HighlightText from "../HighlightText/HighlightText";
+import Parser from 'html-react-parser';
+import MD from "../JS/MarkdownIt";
 
 const styles = {
   spinnerContainer: {
@@ -44,18 +45,18 @@ class Project extends React.Component {
   }
 
   configureDisqus(slug) {
-    const canonicalUrl = "https://tomlewis.tech/projects/project/" + slug
-    this.setState({ disqusShortname: 'tomlewis-tech' });
+    const canonicalUrl = "https://tomlewis.tech/projects/project/" + slug;
+    this.setState({ disqusShortname: "tomlewis-tech" });
     const disqusConfig = {
       url: canonicalUrl,
       identifier: this.state.project.id,
-      title: this.state.project["projectTitle"],
-    }
-    this.setState({ disqusConfig: disqusConfig })
+      title: this.state.project["projectTitle"]
+    };
+    this.setState({ disqusConfig: disqusConfig });
   }
 
   componentDidMount() {
-    let slug = this.props.match.params.slug
+    let slug = this.props.match.params.slug;
     FlamelinkApp.content
       .getByField("project", "slug", slug)
       .then(p => {
@@ -93,18 +94,24 @@ class Project extends React.Component {
         </Grid>
         <Grid item xs={12} sm={8} md={6} className={classes.title}>
           <Typography variant="subheading">
-            Published: {new Date(this.state.project["datePublished"]).toDateString()},
-            Last Modified: {new Date(this.state.project["dateLastModified"]).toDateString()}
+            Published: {new Date(this.state.project["datePublished"]).toDateString()}, Last
+            Modified: {new Date(this.state.project["dateLastModified"]).toDateString()}
           </Typography>
-          <Disqus.CommentCount shortname={this.state.disqusShortname} config={this.state.disqusConfig}>
+          <Disqus.CommentCount
+            shortname={this.state.disqusShortname}
+            config={this.state.disqusConfig}
+          >
             Comments
           </Disqus.CommentCount>
         </Grid>
         <Grid item xs={12} sm={8} md={6} className={classes.gridItem}>
           <Paper className={classes.paperItem}>
-            <ReactMarkdown source={this.state.project["content"]} />
+            {Parser(MD.render(this.state.project["content"]))}
           </Paper>
-          <Disqus.DiscussionEmbed shortname={this.state.disqusShortname} config={this.state.disqusConfig} />
+          <Disqus.DiscussionEmbed
+            shortname={this.state.disqusShortname}
+            config={this.state.disqusConfig}
+          />
         </Grid>
       </Grid>
     );

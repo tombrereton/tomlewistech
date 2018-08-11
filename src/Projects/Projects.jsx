@@ -28,7 +28,7 @@ class Projects extends React.Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     FlamelinkApp.content
       .get("project")
       .then(p => {

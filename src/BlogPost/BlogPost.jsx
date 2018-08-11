@@ -3,10 +3,11 @@ import Disqus from 'disqus-react';
 import { ClipLoader } from "react-spinners";
 import { withStyles } from "@material-ui/core/styles";
 import FlamelinkApp from "../FlamelinkApp/FlamelinkApp";
-import ReactMarkdown from "react-markdown";
 import { Paper, Typography } from "@material-ui/core";
 import { Grid } from "@material-ui/core";
 import HighlightText from "../HighlightText/HighlightText";
+import Parser from 'html-react-parser';
+import MD from "../JS/MarkdownIt"
 
 const styles = {
   spinnerContainer: {
@@ -31,7 +32,11 @@ const styles = {
   },
   paperItem: {
     padding: "1em"
+  },
+  code: {
+    color: 'red'
   }
+
 };
 
 class Project extends React.Component {
@@ -107,7 +112,7 @@ class Project extends React.Component {
         </Grid>
         <Grid item xs={12} sm={8} md={6} className={classes.gridItem}>
           <Paper className={classes.paperItem}>
-            <ReactMarkdown source={this.state.post["content"]} />
+           {Parser(MD.render(this.state.post["content"]))}
           </Paper>
 
           <Disqus.DiscussionEmbed shortname={this.state.disqusShortname} config={this.state.disqusConfig} />

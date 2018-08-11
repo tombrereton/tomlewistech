@@ -1,9 +1,10 @@
-html, body {
+html,
+body {
   margin: 0px;
   padding: 0px;
   height: 100%;
-  font-family: 'Quicksand', sans-serif;
-  background-color: #EEEEEF;
+  font-family: "Quicksand", sans-serif;
+  background-color: #eeeeef;
   color: #727373;
 }
 
@@ -24,14 +25,8 @@ a {
 }
 
 .highlightTitle {
-  background-color: #C5EBF1;
+  background-color: #c5ebf1;
   margin-top: 0.5em;
-}
-
-
-pre:hover,
-pre:focus {
-  width: min-content;
 }
 
 pre {
@@ -41,5 +36,5 @@ pre {
   border-radius: 5px;
   font-family: monospace, monospace;
   tab-size: 4;
+  word-wrap: normal;
 }
-

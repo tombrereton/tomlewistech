@@ -21,6 +21,7 @@
     "markdown-it-highlightjs": "^3.0.0",
     "markdown-it-imsize": "^2.0.1",
     "markdown-it-table-of-contents": "^0.4.0",
+    "markdown-it-toc-and-anchor-with-slugid": "^1.1.4",
     "npm": "^6.2.0",
     "prismjs": "^1.15.0",
     "react": "^16.4.1",

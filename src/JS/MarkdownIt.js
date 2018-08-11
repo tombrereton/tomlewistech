@@ -1,25 +1,19 @@
-var hljs = require('highlight.js'); // https://highlightjs.org/
-hljs.initHighlighting();
+import markdownIt from "markdown-it";
+import imSize from "markdown-it-imsize";
+import markdownItTocAndAnchor from "markdown-it-toc-and-anchor-with-slugid";
+import uslug from "uslug";
 
-// Actual default values
-var md = require('markdown-it')({
+var markdown = markdownIt({
   html: true,
   linkify: true,
-  typography: true,
-  highlight: function (str, lang) {
-    if (lang && hljs.getLanguage(lang)) {
-      try {
-        return hljs.highlight(lang, str).value;
-      } catch (__) {}
-    }
+  typography: true
+});
 
-    return ''; // use external default escaping
+markdown.use(imSize);
+markdown.use(markdownItTocAndAnchor, {
+  slugify: header => {
+    return encodeURIComponent(uslug(header));
   }
 });
 
-md.use(require('markdown-it-imsize'));
-md.use(require("markdown-it-anchor")); 
-md.use(require("markdown-it-table-of-contents"));
-md.use(require('markdown-it-highlightjs'))
-
-export default md
+export default markdown;

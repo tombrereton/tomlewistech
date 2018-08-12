@@ -45,3 +45,7 @@ figure {
   align-items: center;
   justify-content: center;
 }
+
+figure > img {
+  max-width: 100%;
+}

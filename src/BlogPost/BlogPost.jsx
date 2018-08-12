@@ -33,9 +33,6 @@ const styles = {
   paperItem: {
     padding: "1em"
   },
-  code: {
-    color: 'red'
-  }
 
 };
 

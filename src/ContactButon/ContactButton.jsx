@@ -10,7 +10,7 @@ const styles = {
   button: {
     borderRadius: 5,
     position: "fixed",
-    bottom: 10,
+    bottom: "2em",
     fontSize: "large"
   },
   buttonText: {

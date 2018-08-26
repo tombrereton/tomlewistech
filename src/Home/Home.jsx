@@ -1,9 +1,7 @@
 import React from "react";
 import { css } from "react-emotion";
-import FloatingButton from "../ContactButon/ContactButton";
+import ContactButton from "../ContactButon/ContactButton";
 import HighlightText from "../HighlightText/HighlightText";
-import HomeCard from "../HomeCard/HomeCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const homeContainer = css({
   display: "flex",
@@ -40,7 +38,7 @@ class Home extends React.Component {
         <div className={section3}>
           <HighlightText color="#C5EBF1" text="software engineer." type="h1" />
         </div>
-        <FloatingButton text="Contact Me" />
+        <ContactButton text="Contact Me" />
       </div>
     );
   }

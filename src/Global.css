@@ -1,3 +1,7 @@
+* {
+  max-width: 100%;
+}
+
 html,
 body {
   margin: 0px;
@@ -29,15 +33,6 @@ a {
   margin-top: 0.5em;
 }
 
-pre {
-  background-color: #2d2d2d;
-  color: #eeeeef;
-  padding: 1em;
-  border-radius: 5px;
-  font-family: monospace, monospace;
-  tab-size: 4;
-  word-wrap: normal;
-}
 
 figure {
   display: flex;
@@ -49,3 +44,24 @@ figure {
 figure > img {
   max-width: 100%;
 }
+
+
+/* START: Formatting for code blocks */
+pre {
+  background-color: #2d2d2d;
+  color: #eeeeef;
+  padding: 1em;
+  border-radius: 5px;
+  tab-size: 4;
+}
+
+pre {
+	white-space: pre-wrap;                 /* css3 browsers  */
+	white-space: -moz-pre-wrap !important; /* 1999+ mozilla  */
+	white-space: -pre-wrap;                /* opera 4 thru 6 */
+	white-space: -o-pre-wrap;              /* opera 7 and up */
+	word-wrap: break-word;                 /* ie 5.5+ and up */
+}
+
+
+/* END: Formatting for code blocks */

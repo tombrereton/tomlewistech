@@ -25,7 +25,7 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     paddingBottom: "1em",
-    minHeight: 100
+    minHeight: "fit-content"
   },
   gridItem: {
     width: "100%"
@@ -94,7 +94,11 @@ class Project extends React.Component {
       >
         <Grid item xs={12} sm={8} md={6} className={classes.title}>
           <HighlightText color="#C5EBF1" text={this.state.post["postTitle"]} type="h1" />
+        </Grid>
+        <Grid item xs={12} sm={8} md={6} className={classes.title}>
           <Typography variant="subheading">{this.state.post["author"]}</Typography>
+        </Grid>
+        <Grid item xs={12} sm={8} md={6} className={classes.title}>
           <Typography variant="subheading">Tags: {this.state.post["tags"]}</Typography>
         </Grid>
         <Grid item xs={12} sm={8} md={6} className={classes.title}>
@@ -102,7 +106,8 @@ class Project extends React.Component {
             Published: {new Date(this.state.post["datePublished"]).toDateString()},
             Last Modified: {new Date(this.state.post["dateLastModified"]).toDateString()}
           </Typography>
-
+        </Grid>
+        <Grid item xs={12} sm={8} md={6} className={classes.title}>
           <Disqus.CommentCount shortname={this.state.disqusShortname} config={this.state.disqusConfig}>
             Comments
           </Disqus.CommentCount>

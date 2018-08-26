@@ -22,6 +22,7 @@ const styles = {
     "& img": {
       margin: "0 auto",
       height: "100%",
+      maxWidth: "unset"
     }
   },
   skillContainer: {

@@ -10,6 +10,7 @@ body {
   font-family: "Quicksand", sans-serif;
   background-color: #eeeeef;
   color: #727373;
+  height: 100%;
 }
 
 h1 {
@@ -25,7 +26,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .highlightTitle {

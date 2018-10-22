@@ -1,7 +1,7 @@
 import React from "react";
 import "./Global.css";
+import { withStyles } from "@material-ui/core/styles";
 import RouteManager from "./RouteManager/RouteManager";
-import { css } from "emotion";
 import WebFont from "webfontloader";
 import Header from "./Header/Header";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
@@ -18,6 +18,7 @@ const THEME = createMuiTheme({
   typography: {
     fontFamily: '"Quicksand", "Helvetica", "Arial", sans-serif',
     fontSize: 14,
+    fontSizeLarge: 36,
     fontWeightLight: 300,
     fontWeightRegular: 400,
     fontWeightMedium: 500
@@ -53,19 +54,25 @@ WebFont.load({
   }
 });
 
-const App = () => (
-  <MuiThemeProvider theme={THEME}>
-    <div className={app}>
-      <Header />
-      <RouteManager />
-    </div>
-  </MuiThemeProvider>
-);
+function App(props) {
+  const { classes } = props;
+  return (
+    <MuiThemeProvider theme={THEME}>
+      <div className={classes.app}>
+        <Header />
+        <RouteManager />
+      </div>
+    </MuiThemeProvider>
+  )
+}
 
-const app = css({
-  display: "flex",
-  flexDirection: "column",
-  flex: 1
-});
+const styles = {
+  app: {
+    display: "flex",
+    flexDirection: "column",
+    flex: 1,
+    height: "100%"
+  },
+}
 
-export default App;
+export default withStyles(styles)(App);

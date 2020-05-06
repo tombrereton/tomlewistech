@@ -1,6 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ProjectCard from "../components/projectCard"
@@ -34,13 +39,33 @@ const IndexPage = () => (
     <div style={projectShelfStyles}>
       <ProjectCard title="MY GIT SETUP" imgSrc={gitSetup} />
       <ProjectCard title="SETUP A SIMPLE CI/CD IN BASH" imgSrc={cicdSetup} />
-    </div>
+    </div >
     <h1 style={{ color: '#C54F81' }}>CONTACT</h1>
-    <p>tom@tomlewis.tech</p>
-    <p><a href="https://www.linkedin.com/in/tbrereton/">LinkedIn</a></p>
-    <p><a href=" https://github.com/tombrereton">Github</a></p>
-  </Layout>
+    <div style={contactItemStyles}>
+      <FontAwesomeIcon icon={faEnvelope} />
+      <p style={contactTextStyles}><a href="mailto:tom@tomlewis.tech">tom@tomlewis.tech</a></p>
+    </div>
+    <div style={contactItemStyles}>
+      <FontAwesomeIcon icon={faLinkedin} />
+      <p style={contactTextStyles}><a href="https://www.linkedin.com/in/tbrereton/">LinkedIn</a></p>
+    </div>
+    <div style={contactItemStyles}>
+      <FontAwesomeIcon icon={faGithub} />
+      <p style={contactTextStyles}><a href=" https://github.com/tombrereton">Github</a></p>
+    </div>
+  </Layout >
 )
+var contactItemStyles = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'flex-start',
+  paddingTop: '1em'
+}
+
+var contactTextStyles = {
+  margin: 0,
+  marginLeft: '1em'
+}
 
 var sunStyles = {
   width: `250px`,

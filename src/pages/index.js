@@ -26,8 +26,10 @@ const IndexPage = () => (
         <img src={retroSunPng} />
       </object>
     </div>
-    <p>Hi, I'm <span style={{ color: '#ffffff' }}>Tom</span>. I'm a web developer and software architect based in <span style={{ color: '#ffffff' }}>London</span>.</p>
-    <p>My specialties range from building websites for restaurants to complex cloud solutions.</p>
+    <div className='text-focus-in'>
+      <p>Hi, I'm <span style={{ color: '#ffffff' }}>Tom</span>. I'm a web developer and software architect based in <span style={{ color: '#ffffff' }}>London</span>.</p>
+      <p>My specialties range from building websites for restaurants to complex cloud solutions.</p>
+    </div>
     <h1 style={{ color: '#EB4C49' }}>PROJECTS</h1>
     <div style={projectShelfStyles}>
       <ProjectCard title="GEM ISLAND" imgSrc={matchThree} />
@@ -55,6 +57,7 @@ const IndexPage = () => (
     </div>
   </Layout >
 )
+
 var contactItemStyles = {
   display: 'flex',
   alignItems: 'center',

@@ -22,8 +22,11 @@ var imgStyles = {
 var squareContainer = {
     display: 'flex',
     position: 'relative',
-    marginLeft: '0.5em',
-    marginRight: '0.5em',
+    // marginLeft: '0.5em',
+    marginRight: '1.3em',
+    '@media (min-width: 413)': {
+        marginRight: '1px'
+    }
 }
 
 var projectTitleStyles = {

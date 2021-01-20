@@ -1,0 +1,30 @@
+@import '../css/fonts.css';
+@import '../css/vars.css';
+html {
+    background-color: var(--background);
+}
+
+.home {
+    padding: var(--padding);
+}
+
+.highlight {
+    font-weight: 900;
+    background: -webkit-linear-gradient(#F07777, #EF6BCA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading {
+    margin: 2em 0 1em 0;
+}
+
+.subHeading {
+    margin: 1em 0 1em 0;
+}
+
+.helpHeading {
+    position: absolute;
+    bottom: var(--padding);
+}

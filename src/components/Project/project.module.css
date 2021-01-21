@@ -1,0 +1,37 @@
+@import '../../css/fonts.css';
+@import '../../css/vars.css';
+:root {
+    --project-width: min(calc(100vw - 40px), 400px);
+    --image-width: calc(var(--project-width) - 20px);
+    --image-hover: calc(var(--project-width) + 80px);
+}
+
+.project {
+    background-color: var(--accent1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--project-width);
+    height: var(--project-width);
+}
+
+.projectImg {
+    width: var(--image-width);
+    -webkit-filter: drop-shadow(0px 70px 25px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 70px 25px rgba(0, 0, 0, 0.5));
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    .projectImg {
+        filter: drop-shadow(0px 70px 20px rgba(0, 0, 0, 0.5));
+        -webkit-filter: drop-shadow(0px 70px 15px rgba(0, 0, 0, 0.5));
+    }
+}
+
+.projectImg:hover {
+    width: var(--image-hover);
+}
+
+.projectImg:active {
+    width: var(--image-hover);
+}

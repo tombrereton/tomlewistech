@@ -23,15 +23,19 @@
 
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
     .projectImg {
-        filter: drop-shadow(0px 70px 20px rgba(0, 0, 0, 0.5));
+        filter: drop-shadow(0px 70px 15px rgba(0, 0, 0, 0.5));
         -webkit-filter: drop-shadow(0px 70px 15px rgba(0, 0, 0, 0.5));
     }
 }
 
 .projectImg:hover {
     width: var(--image-hover);
+    -webkit-filter: drop-shadow(0px 70px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 70px 5px rgba(0, 0, 0, 0.5));
 }
 
 .projectImg:active {
     width: var(--image-hover);
+    -webkit-filter: drop-shadow(0px 70px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 70px 5px rgba(0, 0, 0, 0.5));
 }

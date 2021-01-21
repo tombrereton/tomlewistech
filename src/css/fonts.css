@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
 @font-face {
     font-family: 'Circular';
     src: url(../fonts/CircularStd-Book.ttf);
@@ -51,8 +52,15 @@ h4 {
     font-size: 24px;
 }
 
-p {
+h5 {
     font-family: 'Circular', 'Roboto', sans-serif;
+    font-weight: 200;
+    line-height: 22px;
+    font-size: 18px;
+}
+
+p {
+    font-family: 'Ovo', serif;
     font-weight: 200;
     line-height: 22px;
     font-size: 18px;

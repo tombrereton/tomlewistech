@@ -6,6 +6,7 @@ import Dynamic from 'containers/Dynamic'
 
 import './app.css'
 import Header from './components/Header/header'
+import Footer from './components/Footer/footer'
 
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(['dynamic'])
@@ -20,6 +21,7 @@ function App() {
             <Dynamic path="dynamic" />
             <Routes path="*" />
           </Router>
+          <Footer />
         </React.Suspense>
       </div>
     </Root>

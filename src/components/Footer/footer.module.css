@@ -1,0 +1,36 @@
+@import '../../css/fonts.css';
+@import '../../css/vars.css';
+.footer {
+    background-color: var(--footer-background);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.copyrightSection {
+    display: flex;
+    align-items: center;
+    color: #C4C4C4;
+}
+
+.companySection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.companyText {
+    font-size: 14px;
+    margin-left: 3px;
+}
+
+.footerText {
+    font-size: 14px;
+}
+
+.copyrightImg {
+    height: 15px;
+    margin-right: 10px;
+}

@@ -1,14 +1,14 @@
 import React from "react";
-import logo from "./logo.png";
 import styles from "./header.module.css";
+import Logo from "../Logo/logo";
 
 export default function Header() {
     return (
         <div>
             <div className={styles.header}>
                 <div className={styles.headerLeft}>
-                    <img className={styles.headerLogo} src={logo} />
-                    <p className={styles.company}>Tom Lewis Tech</p>
+                    <Logo />
+                    <h5 className={styles.company}>Tom Lewis Tech</h5>
                 </div>
             </div>
             <div className={styles.emptyDiv}>

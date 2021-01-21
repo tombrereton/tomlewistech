@@ -1,0 +1,6 @@
+@import '../../css/fonts.css';
+@import '../../css/vars.css';
+
+.headerLogo {
+    height: 45px;
+}

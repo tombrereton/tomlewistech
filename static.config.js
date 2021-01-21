@@ -30,6 +30,13 @@ export default {
         location: path.resolve('./src/pages'),
       },
     ],
+    [
+      require.resolve('react-static-plugin-favicons'),
+      {
+        inputFile: path.resolve('./src/data/favicon.png'),
+        configuration: { icons: { appleStartup: false } }
+      },
+    ],
     require.resolve('react-static-plugin-reach-router'),
     require.resolve('react-static-plugin-sitemap'),
     require.resolve('react-static-plugin-css-modules'),

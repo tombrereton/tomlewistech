@@ -44,6 +44,13 @@ h3 {
     font-size: 36px;
 }
 
+h4 {
+    font-family: 'Circular', 'Roboto', sans-serif;
+    font-weight: 200;
+    line-height: 34px;
+    font-size: 24px;
+}
+
 p {
     font-family: 'Circular', 'Roboto', sans-serif;
     font-weight: 200;

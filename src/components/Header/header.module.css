@@ -2,6 +2,9 @@
 @import '../../css/vars.css';
 
 .header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
     height: var(--header-height);
     background-color: var(--background);
     display: flex;
@@ -9,6 +12,10 @@
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.emptyDiv{
+    min-height: var(--header-height);
 }
 
 .headerLeft {

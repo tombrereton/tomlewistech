@@ -7,7 +7,7 @@ export default function Service(props) {
   return (
     <div className={styles.service}>
       <img className={styles.serviceImg} src={image} />
-      <h4>{props.text}</h4>
+      <h4 className={styles.text}>{props.text}</h4>
     </div>
   )
 }

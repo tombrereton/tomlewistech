@@ -4,7 +4,9 @@ import styles from './header.module.css';
 
 export default () => (
     <div className={styles.header}>
-        <img src={logo} />
-        <p className={styles.company}>Tom Lewis Tech</p>
-    </div >
+        <div className={styles.headerLeft}>
+            <img src={logo} />
+            <p className={styles.company}>Tom Lewis Tech</p>
+        </div>
+    </div>
 )

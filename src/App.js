@@ -13,9 +13,9 @@ addPrefetchExcludes(['dynamic'])
 function App() {
   return (
     <Root>
-      <Header />
       <div className="content">
         <React.Suspense fallback={<em>Loading...</em>}>
+          <Header />
           <Router>
             <Dynamic path="dynamic" />
             <Routes path="*" />

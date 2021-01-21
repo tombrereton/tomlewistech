@@ -1,0 +1,31 @@
+@import '../../css/fonts.css';
+@import '../../css/vars.css';
+:root {
+    --project-width: min(calc(100vw - 40px), 400px);
+    --image-width: calc(var(--project-width) - 20px);
+    --image-hover: calc(var(--project-width) + 80px);
+}
+
+.bigLinkSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.bigLink {
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    padding: 10px 15px 10px 15px;
+    box-shadow: 15px 15px 0px #000000;
+
+}
+
+.text {
+    font-weight: 900;
+    color: var(--color)
+}
+
+a {
+    text-decoration: none;
+}

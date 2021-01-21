@@ -4,6 +4,7 @@ import styles from './pages.module.css'
 import responsive from '../data/services/responsive.svg'
 import soundsort from '../data/projects/soundsort.png'
 import Project from '../components/Project/project'
+import BigLink from '../components/BigLink/bigLink'
 
 export default () => (
   <div className={styles.home}>
@@ -17,5 +18,6 @@ export default () => (
     <Service image={responsive} text={"Help setup a business Newsletter to retain existing customers"} />
     <h2 className={styles.sectionHeading}>Some <span className={styles.highlight}>Projects</span></h2>
     <Project image={soundsort} url="https://soundsort.net"/>
+    <BigLink />
   </div>
 )

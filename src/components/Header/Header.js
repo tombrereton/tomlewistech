@@ -1,5 +1,4 @@
 import React from 'react'
-import MenuButton from './MenuButton'
 import logo from './logo.png'
 import styles from './header.module.css'
 
@@ -10,7 +9,6 @@ export default function Header() {
                 <img src={logo} />
                 <p className={styles.company}>Tom Lewis Tech</p>
             </div>
-            <MenuButton />
         </div>
     )
 }

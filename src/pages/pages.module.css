@@ -2,6 +2,7 @@
 @import '../css/vars.css';
 html {
     background-color: var(--background);
+    color: var(--color);
 }
 
 .home {
@@ -17,14 +18,13 @@ html {
 }
 
 .heading {
-    margin: 2em 0 1em 0;
+    margin: 1em 0 1em 0;
 }
 
 .subHeading {
     margin: 1em 0 1em 0;
 }
 
-.helpHeading {
-    position: absolute;
-    bottom: var(--padding);
+.sectionHeading {
+    margin: 4em 0 1em 0;
 }

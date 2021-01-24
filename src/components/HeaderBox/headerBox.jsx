@@ -12,6 +12,7 @@ export default function HeaderBox() {
                     <h5 className={styles.company}>Tom Lewis Tech</h5>
                 </div>
                 <div className={styles.headerRight}>
+                    <MenuButton />
                 </div>
             </div>
             <div className={styles.emptyDiv}>

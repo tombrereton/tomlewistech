@@ -10,7 +10,7 @@ function Toggle() {
 
         overlay.style.display === "flex" ? overlay.style.display = "none" : overlay.style.display = "flex"
         overlay.style.display === "flex" ? menuButton.style.background = "#009B95" : menuButton.style.background = "#F9F9F9"
-        overlay.style.display === "flex" ? body.style.overflowY = "hidden" : body.style.overflowY = ""
+        overlay.style.display === "flex" ? body.classList.add(styles.bodyNoScroll) : body.classList.remove(styles.bodyNoScroll);
     }
 }
 

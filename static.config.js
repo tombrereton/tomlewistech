@@ -37,6 +37,10 @@ export default {
         configuration: { icons: { appleStartup: false } }
       },
     ],
+    [
+      require.resolve("react-static-plugin-google-tag-manager"),
+      { id: 'G-28B8Y3ZYVH' }
+    ],
     require.resolve('react-static-plugin-reach-router'),
     require.resolve('react-static-plugin-sitemap'),
     require.resolve('react-static-plugin-css-modules'),

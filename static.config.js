@@ -39,7 +39,10 @@ export default {
     ],
     [
       require.resolve("react-static-plugin-google-tag-manager"),
-      { id: 'G-28B8Y3ZYVH' }
+      {
+        id: 'GTM-WGCWXB4',
+        debug: false
+      }
     ],
     require.resolve('react-static-plugin-reach-router'),
     require.resolve('react-static-plugin-sitemap'),

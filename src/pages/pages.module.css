@@ -7,6 +7,9 @@ html {
 
 .home {
     padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .highlight {

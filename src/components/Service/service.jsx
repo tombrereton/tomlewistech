@@ -6,7 +6,7 @@ export default function Service(props) {
   const text = props.text;
   return (
     <div className={styles.service}>
-      <img className={styles.serviceImg} src={image} />
+      {props.children}
       <h4 className={styles.text}>{props.text}</h4>
     </div>
   )

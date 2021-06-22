@@ -28,14 +28,12 @@
     }
 }
 
-.projectImg:hover {
-    width: var(--image-hover);
+.project:hover > .projectImg {
     -webkit-filter: drop-shadow(0px 70px 5px rgba(0, 0, 0, 0.5));
     filter: drop-shadow(0px 70px 5px rgba(0, 0, 0, 0.5));
 }
 
-.projectImg:active {
-    width: var(--image-hover);
+.project:active > .projectImg {
     -webkit-filter: drop-shadow(0px 70px 5px rgba(0, 0, 0, 0.5));
     filter: drop-shadow(0px 70px 5px rgba(0, 0, 0, 0.5));
 }

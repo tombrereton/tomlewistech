@@ -7,6 +7,12 @@ import Dynamic from 'containers/Dynamic'
 import './app.css'
 import Header from './components/HeaderBox/headerBox'
 import Footer from './components/Footer/footer'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faDesktop, faCameraRetro, faUserCheck, faChartArea, faCog, faEye, faMailBulk, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(faDesktop, faCameraRetro, faUserCheck, faChartArea, faCog, faEye, faMailBulk, fab, faEnvelope)
+
 
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(['dynamic'])

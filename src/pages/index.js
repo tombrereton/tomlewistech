@@ -12,29 +12,31 @@ import { faDesktop, faCameraRetro, faUserCheck, faChartArea, faCog, faEye, faMai
 export default () => (
   <div className={styles.homeWrapper}>
     <div className={styles.home}>
-      <h1 className={styles.heading}>Hello, I'm <span className={`${styles.highlight} ${styles.underline}`}>Tom.</span></h1>
-      <h3 className={styles.subHeading}>Web Developer & Software Architect.</h3>
+      <h2 className={styles.heading}>Hello, I'm <span className={`${styles.highlight} ${styles.underline}`}>Tom.</span></h2>
+      <h2 className={styles.subHeading}>Web Developer & Software Architect.</h2>
+      <h2 className={styles.sectionHeading}>A little bit about <span className={styles.highlight}>me</span></h2>
+      <p className={styles.textBody}>I’m a web developer and software architect with extensive experience building APIs and services with .NET Core, Azure, Team City, Javascript, React and Octopus. I am also adaptable to other OOP languages and cloud services. I am also an Australian with a deep love for spicy food and my weakness is a bacon and egg roll on a Saturday morning.</p>
       <h2 className={styles.sectionHeading}>How I Can <span className={styles.highlight}>Help</span></h2>
       <Service title={"Website & UI Design"} text={"Optimise for the modern landscape and use a mobile-first approach then scale up."}>
-        <FontAwesomeIcon icon={faDesktop} size={"4x"} color={"#009B95"}/>
+        <FontAwesomeIcon icon={faDesktop} size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"User Testing & UX Design"} text={"Get feedback on how easy your website is to use before (or after) launch."}>
-        <FontAwesomeIcon icon={faUserCheck} size={"4x"} color={"#009B95"}/>
+        <FontAwesomeIcon icon={faUserCheck} size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"Branding"} text={"Become recognisable."}>
-        <FontAwesomeIcon icon={faEye} size={"4x"} color={"#009B95"}/>
+        <FontAwesomeIcon icon={faEye} size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"Website Building"} text={"Websites can range from a single page to a full e-commerce website."}>
-        <FontAwesomeIcon icon={faCog} size={"4x"} color={"#009B95"}/>
+        <FontAwesomeIcon icon={faCog} size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"Search Engine Optimisation (SEO)"} text={"Build websites with SEO optimisation so they appear in Google or other search providers."}>
-        <FontAwesomeIcon icon={faChartArea} size={"4x"} color={"#009B95"}/>
+        <FontAwesomeIcon icon={faChartArea} size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"Company Email Setup"} text={"Give you a professional email domain through Google Suite or Office 365."}>
-        <FontAwesomeIcon icon={faMailBulk} size={"4x"} color={"#009B95"}/>
+        <FontAwesomeIcon icon={faMailBulk} size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"Marketing"} text={"Increase traffic to your website by setting up online ads through Google and Instagram."}>
-        <FontAwesomeIcon icon={faCameraRetro} size={"4x"} color={"#009B95"}/>
+        <FontAwesomeIcon icon={faCameraRetro} size={"4x"} color={"#009B95"} />
       </Service>
       <h2 className={styles.sectionHeading}>Some <span className={styles.highlight}>Projects</span></h2>
       <Project image={soundsort} url="https://soundsort.net" />

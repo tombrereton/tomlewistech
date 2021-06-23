@@ -42,15 +42,18 @@ html {
 }
 
 .heading {
+    text-align: center;
     margin: 1em 0 1em 0;
 }
 
 .subHeading {
+    text-align: center;
     margin: 1em 0 1em 0;
     text-align: center;
 }
 
 .sectionHeading {
+    text-align: center;
     margin: 4em 0 1em 0;
 }
 
@@ -70,6 +73,11 @@ html {
     width: 0%;
     background-color: var(--color);
     animation: underline 1s ease-in-out 500ms forwards;
+}
+
+.textBody {
+    text-align: center;
+    font-size: 22px;
 }
 
 @keyframes underline {

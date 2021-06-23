@@ -1,6 +1,9 @@
 import React from 'react'
 import styles from './header.module.css'
 import closedMenu from './Closed.svg'
+import BigLink from '../BigLink/bigLink';
+import { Link } from 'components/Router'
+
 
 function Toggle() {
     if (typeof document !== 'undefined') {
@@ -21,7 +24,8 @@ export default function MenuButton() {
                 <img className={styles.menuClosed} src={closedMenu} />
             </button>
             <div className={styles.overlay}>
-                <h1>HOME</h1>
+                <h1><Link onClick={() => Toggle()} to="/">HOME</Link></h1>
+                <BigLink />
             </div>
         </div>
     )

@@ -1,4 +1,5 @@
 import React from 'react'
+import BigLink from '../components/BigLink/bigLink'
 import ProfilePic from '../components/ProfilePic/profilePic'
 import styles from './pages.module.css'
 
@@ -21,6 +22,8 @@ export default () => (
 
       <h4 className={styles.sectionHeading}>Why do I love what I do?</h4>
       <p className={styles.bigTextBody}>My experiences, both educationally and through work, have led me to successfully enable small to medium size businesses to be visible online. I enjoy meeting new people and providing efficient and elegant solutions to empower their businesses and products to reach their highest potential</p>
+
+      <BigLink />
     </div>
   </div>
 )

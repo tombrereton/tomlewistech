@@ -73,9 +73,6 @@ button {
     overflow-y: hidden;
 }
 
-.overlay a {
-    color: var(--color)
-}
 
 .bodyNoScroll {
     overflow-y: hidden;

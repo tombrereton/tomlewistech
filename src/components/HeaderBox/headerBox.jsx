@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'components/Router'
 import styles from "./header.module.css";
 import Logo from "../Logo/logo";
 import MenuButton from "./MenuButton";
@@ -8,8 +9,8 @@ export default function HeaderBox() {
         <div>
             <div className={styles.header}>
                 <div className={styles.headerLeft}>
-                    <Logo />
-                    <h5 className={styles.company}>Tom Lewis Tech</h5>
+                    <Link to="/"><Logo /></Link>
+                    <Link to="/"><h5 className={styles.company}>Tom Lewis Tech</h5></Link>
                 </div>
                 <div className={styles.headerRight}>
                     <MenuButton />

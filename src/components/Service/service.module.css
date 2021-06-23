@@ -8,13 +8,17 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 50px 0 100px 0;
+    margin: 25px 0 50px 0;
 }
 
 .serviceImg {
     height: 150px;
 }
 
-.text {
+.text, .boldText {
     margin-top: 10px;
+}
+
+.boldText {
+    font-weight: 400;
 }

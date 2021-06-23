@@ -17,13 +17,13 @@ export default () => (
       <h4 className={styles.subHeading}>A web developer & software architect</h4>
       <p className={styles.textBody}>I'm also an Australian with a deep love for spicy food and a weakness for bacon & egg rolls on a Saturday morning.</p>
       <h3 className={styles.sectionHeading}>How I Can <span className={styles.highlight}>Help</span></h3>
-      <Service title={"Website & UI Design"} text={"Optimise for the modern landscape and use a mobile-first approach then scale up."}>
+      <Service title={"Website & UI Design"} text={"Using a mobile-first approach, with simplicity & conversion in mind"}>
         <FontAwesomeIcon icon={faDesktop} size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"User Testing & UX Design"} text={"Get feedback on how easy your website is to use before (or after) launch."}>
         <FontAwesomeIcon icon={faUserCheck} size={"4x"} color={"#009B95"} />
       </Service>
-      <Service title={"Branding"} text={"Become recognisable."}>
+      <Service title={"Branding"} text={"We work together to come up with a brand strategy and the core identity elements e.g. Logo, Message, Fonts, Colour pallette, Visual Language."}>
         <FontAwesomeIcon icon={faEye} size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"Website Building"} text={"Websites can range from a single page to a full e-commerce website."}>

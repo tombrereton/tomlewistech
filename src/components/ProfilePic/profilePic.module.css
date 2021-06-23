@@ -1,0 +1,17 @@
+@import '../../css/fonts.css';
+@import '../../css/vars.css';
+
+.pic {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.imageCropper {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}

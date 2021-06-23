@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../components/Logo/logo'
+import ProfilePic from '../components/ProfilePic/profilePic'
 import styles from './pages.module.css'
 
 export default () => (
@@ -9,10 +9,10 @@ export default () => (
       <h3 className={styles.heading}>A little bit about <span className={styles.highlight}>me</span></h3>
 
       <div className={styles.profileImg}>
-        <Logo size={200} />
+        <ProfilePic size={200} />
       </div>
 
-      <h4 className={styles.sectionHeading}>Who am I?</h4>
+      <h4 className={styles.firstSectionHeading}>Who am I?</h4>
       <p className={styles.bigTextBody}>I’m a web developer and software architect with extensive experience building websites, APIs and back end services. This experience includes working as a software engineer at ASOS,  an e-commerce company which handles millions of user per day.</p>
       <p className={styles.bigTextBody}>As a consultant, I’ve worked with businesses of all shapes and sizes to help them reach their highest potential through increased online visibility, and providing elegant and effective solutions. With a Masters in Computer Science from the University of Birmingham and having worked in both Australia and the UK, I’m able to provide specialised services in line with your needs.</p>
 

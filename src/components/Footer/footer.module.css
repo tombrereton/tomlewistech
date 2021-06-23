@@ -17,11 +17,14 @@
 
 .companySection {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 15px;
 }
 
 .companyText {
+    font-family: 'Circular', 'Roboto', sans-serif;
+    font-weight: 200;
     font-size: 14px;
     margin-left: 3px;
 }

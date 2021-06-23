@@ -1,7 +1,6 @@
 import React from 'react'
 import Service from '../components/Service/service'
 import styles from './pages.module.css'
-import responsive from '../data/services/responsive.svg'
 import soundsort from '../data/projects/soundsort.png'
 import Project from '../components/Project/project'
 import BigLink from '../components/BigLink/bigLink'

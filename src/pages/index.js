@@ -5,14 +5,15 @@ import responsive from '../data/services/responsive.svg'
 import soundsort from '../data/projects/soundsort.png'
 import Project from '../components/Project/project'
 import BigLink from '../components/BigLink/bigLink'
+import { Link } from 'components/Router'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDesktop, faCameraRetro, faUserCheck, faChartArea, faCog, faEye, faMailBulk } from '@fortawesome/free-solid-svg-icons'
 
 export default () => (
-  <div className={styles.homeWrapper}>
-    <div className={styles.home}>
-      <h3 className={styles.heading}>Hello, I'm <span className={`${styles.highlight} ${styles.underline}`}>Tom</span></h3>
+  <div className={styles.pageWrapper}>
+    <div className={styles.page}>
+      <h3 className={styles.heading}>Hello, I'm <span className={`${styles.highlight} ${styles.underline}`}><Link to="/about">Tom</Link></span></h3>
       <h4 className={styles.subHeading}>A web developer & software architect</h4>
       <p className={styles.textBody}>I'm also an Australian with a deep love for spicy food and a weakness for bacon & egg rolls on a Saturday morning.</p>
       <h3 className={styles.sectionHeading}>How I Can <span className={styles.highlight}>Help</span></h3>

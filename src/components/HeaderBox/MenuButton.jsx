@@ -25,6 +25,7 @@ export default function MenuButton() {
             </button>
             <div className={styles.overlay}>
                 <h1><Link onClick={() => Toggle()} to="/">HOME</Link></h1>
+                <h1><Link onClick={() => Toggle()} to="/about">ABOUT ME</Link></h1>
                 <BigLink />
             </div>
         </div>

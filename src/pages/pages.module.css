@@ -5,7 +5,7 @@ html {
     color: var(--color);
 }
 
-.home {
+.page {
     padding: var(--padding);
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@ html {
     max-width: 600px;
 }
 
-.homeWrapper {
+.pageWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +67,7 @@ html {
     position: absolute;
     content: '';
     bottom: 2px;
-    left: 5px;
+    left: 3px;
     height: 4px;
     width: 0%;
     background-color: var(--color);
@@ -77,6 +77,16 @@ html {
 .textBody { 
     padding: 1em 0 1em 0;
     text-align: center;
+}
+
+.bigTextBody { 
+    padding: 0 0 1em 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.profileImg {
+    margin: 0 0 5em 0;
 }
 
 @keyframes underline {

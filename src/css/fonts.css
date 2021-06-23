@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ovo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
 @font-face {
     font-family: 'Circular';
     src: url(../fonts/CircularStd-Book.ttf);
@@ -61,8 +62,8 @@ h5 {
 }
 
 p {
-    font-family: 'Ovo', serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     line-height: 22px;
-    font-size: 18px;
+    font-size: 20px;
 }

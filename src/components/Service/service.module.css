@@ -19,6 +19,7 @@
     margin-top: 10px;
 }
 
-.boldText {
-    font-weight: 400;
+.subHeading {
+    text-align: center;
+    margin: 1em 0 0 0;
 }

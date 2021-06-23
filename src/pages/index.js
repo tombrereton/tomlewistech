@@ -12,11 +12,10 @@ import { faDesktop, faCameraRetro, faUserCheck, faChartArea, faCog, faEye, faMai
 export default () => (
   <div className={styles.homeWrapper}>
     <div className={styles.home}>
-      <h2 className={styles.heading}>Hello, I'm <span className={`${styles.highlight} ${styles.underline}`}>Tom.</span></h2>
-      <h2 className={styles.subHeading}>Web Developer & Software Architect.</h2>
-      <h2 className={styles.sectionHeading}>A little bit about <span className={styles.highlight}>me</span></h2>
-      <p className={styles.textBody}>I’m a web developer and software architect with extensive experience building APIs and services with .NET Core, Azure, Team City, Javascript, React and Octopus. I am also adaptable to other OOP languages and cloud services. I am also an Australian with a deep love for spicy food and my weakness is a bacon and egg roll on a Saturday morning.</p>
-      <h2 className={styles.sectionHeading}>How I Can <span className={styles.highlight}>Help</span></h2>
+      <h3 className={styles.heading}>Hello, I'm <span className={`${styles.highlight} ${styles.underline}`}>Tom</span></h3>
+      <h4 className={styles.subHeading}>A web developer & software architect</h4>
+      <p className={styles.textBody}>I'm also an Australian with a deep love for spicy food and a weakness for bacon & egg rolls on a Saturday morning.</p>
+      <h3 className={styles.sectionHeading}>How I Can <span className={styles.highlight}>Help</span></h3>
       <Service title={"Website & UI Design"} text={"Optimise for the modern landscape and use a mobile-first approach then scale up."}>
         <FontAwesomeIcon icon={faDesktop} size={"4x"} color={"#009B95"} />
       </Service>

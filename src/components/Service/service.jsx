@@ -7,8 +7,8 @@ export default function Service(props) {
   return (
     <div className={styles.service}>
       {props.children}
-      <h4 className={styles.boldText}>{props.title}</h4>
-      <h4 className={styles.text}>{props.text}</h4>
+      <h4 className={styles.subHeading}>{props.title}</h4>
+      <p className={styles.text}>{props.text}</p>
     </div>
   )
 }

@@ -14,6 +14,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 library.add(faDesktop, faCameraRetro, faUserCheck, faChartArea, faCog, faEye, faMailBulk, fab, faEnvelope)
 
 
+
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(['dynamic'])
 

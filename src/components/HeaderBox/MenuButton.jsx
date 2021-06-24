@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './header.module.css'
-import closedMenu from './Closed.svg'
+import openMenu from './Closed.svg'
+import closeMenu from './Open.svg'
 import BigLink from '../BigLink/bigLink';
 import { Link } from 'components/Router'
 
@@ -17,15 +18,29 @@ function Toggle() {
     }
 }
 
+
 export default function MenuButton() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const ToggleMenuAndButton = () => {Toggle(); setIsMenuOpen(current => !current)}
+
+    const openMenuButton =
+        <button onClick={() => ToggleMenuAndButton()} className={styles.menu}>
+            <img className={styles.menuClosed} src={openMenu} />
+        </button>
+
+    const closeMenuButton =
+        <button onClick={() => ToggleMenuAndButton()} className={styles.menu}>
+            <img className={styles.menuClosed} src={closeMenu} />
+        </button>
+
     return (
+
         <div className={styles.menuContainer}>
-            <button onClick={() => Toggle()} className={styles.menu}>
-                <img className={styles.menuClosed} src={closedMenu} />
-            </button>
+            {isMenuOpen ? closeMenuButton : openMenuButton}
             <div className={styles.overlay}>
-                <h1><Link onClick={() => Toggle()} to="/">HOME</Link></h1>
-                <h1><Link onClick={() => Toggle()} to="/about">ABOUT ME</Link></h1>
+                <h1><Link onClick={() => ToggleMenuAndButton()} to="/">HOME</Link></h1>
+                <h1><Link onClick={() => ToggleMenuAndButton()} to="/about">ABOUT ME</Link></h1>
                 <BigLink />
             </div>
         </div>

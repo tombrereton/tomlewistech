@@ -2,6 +2,7 @@ import React from 'react'
 import Service from '../components/Service/service'
 import styles from './pages.module.css'
 import soundsort from '../data/projects/soundsort.png'
+import gemIsland from '../data/projects/gemIsland.png'
 import Project from '../components/Project/project'
 import BigLink from '../components/BigLink/bigLink'
 import { Link } from 'components/Router'
@@ -37,7 +38,8 @@ export default () => (
         <FontAwesomeIcon icon="camera-retro" size={"4x"} color={"#009B95"} />
       </Service>
       <h2 className={styles.sectionHeading}>Some <span className={styles.highlight}>Projects</span></h2>
-      <Project image={soundsort} url="https://soundsort.net" />
+      <Project image={soundsort} title="SoundSort" url="https://soundsort.net" />
+      <Project image={gemIsland} title="Gem Island" url="https://gemislandserverless.netlify.app/" />
       <BigLink />
 
     </div>

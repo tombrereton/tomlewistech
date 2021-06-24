@@ -21,7 +21,7 @@ export default () => (
       <Service title={"User Testing & UX Design"} text={"Get feedback on how easy your website is to use before (or after) launch."}>
         <FontAwesomeIcon icon="user-check" size={"4x"} color={"#009B95"} />
       </Service>
-      <Service title={"Branding"} text={"Together, we come up with a brand strategy and the core identity elements e.g. Logo, Messaging, Fonts, Colour pallette, Visual Language."}>
+      <Service title={"Branding"} text={"Together, we come up with a brand strategy for your company, which also includes the core identity elements e.g. Logo, Messaging, Fonts, Colour pallette, Visual Language."}>
         <FontAwesomeIcon icon="eye" size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"Website Building"} text={"Websites can range from a single page to a full e-commerce website."}>

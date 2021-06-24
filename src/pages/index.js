@@ -24,13 +24,13 @@ export default () => (
       <Service title={"Branding"} text={"Together, we come up with a brand strategy for your company, which also includes the core identity elements e.g. Logo, Messaging, Fonts, Colour pallette, Visual Language."}>
         <FontAwesomeIcon icon="eye" size={"4x"} color={"#009B95"} />
       </Service>
-      <Service title={"Website Building"} text={"Websites can range from a single page to a full e-commerce website."}>
+      <Service title={"Website Building"} text={"Websites can range from a single page to a company website, or to a full e-commerce website."}>
         <FontAwesomeIcon icon="cog" size={"4x"} color={"#009B95"} />
       </Service>
-      <Service title={"Search Engine Optimisation (SEO)"} text={"Build websites with SEO optimisation so they appear in Google or other search providers."}>
+      <Service title={"Search Engine Optimisation (SEO)"} text={"Build websites with SEO optimisation so they appear in the top results for Google or other search providers."}>
         <FontAwesomeIcon icon="chart-area" size={"4x"} color={"#009B95"} />
       </Service>
-      <Service title={"Company Email Setup"} text={"Give you a professional email domain through Google Suite or Office 365."}>
+      <Service title={"Company Email Setup"} text={"Give you a professional email domain through Google Workplace or Office 365."}>
         <FontAwesomeIcon icon="mail-bulk" size={"4x"} color={"#009B95"} />
       </Service>
       <Service title={"Marketing"} text={"Increase traffic to your website by setting up online ads through Google and Instagram."}>

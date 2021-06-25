@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./bigLink.module.css";
+import * as styles from "./bigLink.module.css";
 
 export default function BigLink(props) {
   const url = "mailto:tom@tomlewis.tech?subject=[TLT] I'd Like a Website&body=Hi Tom,";

@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import styles from './header.module.css'
+import * as styles from './header.module.css'
 import openMenu from './Closed.svg'
 import closeMenu from './Open.svg'
 import BigLink from '../BigLink/bigLink';
-import { Link } from 'components/Router'
+import { Link } from "gatsby";
 
-
-function Toggle() {
+const Toggle = () => {
     if (typeof document !== 'undefined') {
         var body = document.body;
         var overlay = document.getElementsByClassName(styles.overlay)[0];
@@ -19,19 +18,20 @@ function Toggle() {
 }
 
 
+
 export default function MenuButton() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-    const ToggleMenuAndButton = () => {Toggle(); setIsMenuOpen(current => !current)}
+    const ToggleMenuAndButton = () => { Toggle(); setIsMenuOpen(current => !current) }
 
     const openMenuButton =
         <button onClick={() => ToggleMenuAndButton()} className={styles.menu}>
-            <img className={styles.menuClosed} src={openMenu} />
+            <img className={styles.menuClosed} src={openMenu} alt="menu button - click to open"/>
         </button>
 
     const closeMenuButton =
         <button onClick={() => ToggleMenuAndButton()} className={styles.menu}>
-            <img className={styles.menuClosed} src={closeMenu} />
+            <img className={styles.menuClosed} src={closeMenu} alt="menu button - click to close" />
         </button>
 
     return (

@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from 'components/Router'
-import styles from "./header.module.css";
+import * as styles from "./header.module.css";
 import Logo from "../Logo/logo";
 import MenuButton from "./MenuButton";
+import { Link } from "gatsby";
 
 export default function HeaderBox() {
     return (

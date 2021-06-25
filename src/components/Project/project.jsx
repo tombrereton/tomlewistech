@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./project.module.css";
+import * as styles from "./project.module.css";
 
 export default function Project(props) {
   const image = props.image;
@@ -7,7 +7,7 @@ export default function Project(props) {
   return (
     <a href={url}>
       <div className={styles.project}>
-        <img className={styles.projectImg} src={image} />
+        <img className={styles.projectImg} src={image} alt="project screen preview"/>
       </div>
       <h4 className={styles.title}>{props.title}</h4>
     </a>

@@ -1,9 +1,7 @@
 import React from "react";
-import styles from "./service.module.css";
+import * as styles from "./service.module.css";
 
 export default function Service(props) {
-  const image = props.image;
-  const text = props.text;
   return (
     <div className={styles.service}>
       {props.children}

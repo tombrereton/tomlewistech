@@ -9,6 +9,10 @@
     align-items: center;
     text-align: center;
     margin: 25px 0 50px 0;
+    flex-basis: 450px;
+    max-width: 500px;
+    /* min-width: 400px; */
+    margin: 2em;
 }
 
 .serviceImg {

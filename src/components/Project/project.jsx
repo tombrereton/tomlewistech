@@ -5,11 +5,11 @@ export default function Project(props) {
   const image = props.image;
   const url = props.url;
   return (
-    <a href={url}>
+    <a className={styles.projectContainer} href={url}>
       <div className={styles.project}>
-        <img className={styles.projectImg} src={image} alt="project screen preview"/>
+        <img className={styles.projectImg} src={image} alt="project screen preview" />
       </div>
-      <h4 className={styles.title}>{props.title}</h4>
+        <h4 className={styles.title}>{props.title}</h4>
     </a>
   )
 }

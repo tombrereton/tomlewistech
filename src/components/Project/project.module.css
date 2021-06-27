@@ -6,6 +6,10 @@
     --image-hover: calc(var(--project-width) + 80px);
 }
 
+.projectContainer {
+    margin: 2em;
+}
+
 .project {
     background-color: var(--accent1);
     display: flex;
@@ -24,5 +28,4 @@
 
 .title {
     text-align: center;
-    margin: 0 0 2em 0;
 }

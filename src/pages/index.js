@@ -44,7 +44,7 @@ export default function Home() {
               <FontAwesomeIcon icon="camera-retro" size={"4x"} color={"#009B95"} />
             </Service>
           </div>
-          <h2 className={styles.sectionHeading}>Some <span className={styles.highlight}>Projects</span></h2>
+          <h3 className={styles.sectionHeading}>Some <span className={styles.highlight}>Projects</span></h3>
           <Project image={soundsort} title="SoundSort" url="https://soundsort.net" />
           <Project image={gemIsland} title="Gem Island" url="https://gemislandserverless.netlify.app/" />
           <BigLink />

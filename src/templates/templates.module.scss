@@ -1,0 +1,111 @@
+@import '../css/fonts.css';
+@import '../css/vars.css';
+html {
+    background-color: var(--background);
+    color: var(--color);
+}
+
+.page {
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicesSection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.introSection {
+    max-width: 600px;
+}
+
+.highlight {
+    font-weight: 900;
+    background: linear-gradient(90deg, #F07777, #EF6BCA, var(--accent1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	background-size: 400% 400%;
+	animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.heading {
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+
+.subHeading {
+    text-align: center;
+    margin: 1em 0 1em 0;
+}
+
+.sectionHeading {
+    text-align: center;
+    margin: 2em 0 1em 0;
+}
+
+.firstSectionHeading {
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+.underline {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.underline:after {
+    position: absolute;
+    content: '';
+    bottom: 2px;
+    left: 3px;
+    height: 4px;
+    width: 0%;
+    background-color: var(--color);
+    animation: underline 1s ease-in-out 500ms forwards;
+}
+
+.textBody { 
+    padding: 1em 0 1em 0;
+    text-align: center;
+}
+
+.bigTextBody { 
+    padding: 0 0 1em 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.profileImg {
+    margin: 0 0 5em 0;
+}
+
+@keyframes underline {
+    to {
+        width: 90%;
+    }
+}

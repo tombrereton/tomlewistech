@@ -16,9 +16,9 @@ export default function Home() {
       <div className={styles.pageWrapper}>
         <div className={styles.page}>
           <div className={styles.introSection}>
-            <h3 className={styles.heading}>Hello, I'm <Link to="/about" className={styles.heading}><span className={`${styles.highlight} ${styles.underline}`}>Tom</span></Link></h3>
+            <h3 className={styles.heading}>Hi, I'm <Link to="/about" className={styles.heading}><span className={`${styles.highlight} ${styles.underline}`}>Tom</span></Link></h3>
             <h4 className={styles.subHeading}>A web developer & software architect</h4>
-            <p className={styles.textBody}>I'm also an Australian with a deep love for spicy food and a weakness for bacon & egg rolls on a Saturday morning.</p>
+            <p className={styles.textBody}>I'm an Australian who enjoys strumming the guitar, skating and has a weakness for bacon & egg rolls on a Saturday morning.</p>
           </div>
           <h3 className={styles.sectionHeading}>How I Can <span className={styles.highlight}>Help</span></h3>
           <div className={styles.servicesSection}>

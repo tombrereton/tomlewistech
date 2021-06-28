@@ -45,8 +45,10 @@ export default function Home() {
             </Service>
           </div>
           <h2 className={styles.sectionHeading}>Some <span className={styles.highlight}>Projects</span></h2>
-          <Project image={soundsort} title="SoundSort" url="https://soundsort.net" />
-          <Project image={gemIsland} title="Gem Island" url="https://gemislandserverless.netlify.app/" />
+          <div className={styles.projectsSection}>
+            <Project image={soundsort} title="SoundSort" url="https://soundsort.net" />
+            <Project image={gemIsland} title="Gem Island" url="https://gemislandserverless.netlify.app/" />
+          </div>
           <BigLink />
 
         </div>

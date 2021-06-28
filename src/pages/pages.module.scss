@@ -18,7 +18,7 @@ html {
     align-items: center;
 }
 
-.servicesSection {
+.servicesSection, .projectsSection {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -63,12 +63,12 @@ html {
 
 .sectionHeading {
     text-align: center;
-    margin: 2em 0 1em 0;
+    margin: 2em 0 0 0;
 }
 
 .firstSectionHeading {
     text-align: center;
-    margin: 0 0 1em 0;
+    margin: 0 0 0 0;
 }
 
 .underline {
@@ -95,9 +95,10 @@ html {
 }
 
 .bigTextBody { 
-    padding: 0 0 1em 0;
+    padding: 0.5em 0 1em 0;
     font-size: 18px;
     text-align: left;
+    max-width: 600px;
 }
 
 .profileImg {

@@ -29,7 +29,7 @@ export default function ProjectTemplate({ data: { mdx } }) {
 				<TableOfContents items={mdx.tableOfContents.items} />
 
 				<MDXProvider>
-					<MDXRenderer localImages={mdx.embe}>{mdx.body}</MDXRenderer>
+					<MDXRenderer localImages={mdx.frontmatter.embeddedImages}>{mdx.body}</MDXRenderer>
 				</MDXProvider>
 			</div>
 		</Layout>
@@ -50,7 +50,16 @@ query ProjectQuery($id: String) {
 					childImageSharp {
 						gatsbyImageData(
 							placeholder: BLURRED
-							width: 400
+							width: 500
+							formats: [AUTO, WEBP, AVIF]
+						)
+					}
+				}
+				embeddedImages {
+					childImageSharp {
+						gatsbyImageData(
+							placeholder: BLURRED
+							width: 500
 							formats: [AUTO, WEBP, AVIF]
 						)
 					}

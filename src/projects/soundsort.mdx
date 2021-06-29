@@ -5,10 +5,46 @@ author: Tom Lewis
 datePublished: 2021-02-03
 dateModified: 2021-02-03
 featuredImage: soundsort.png
+embeddedImages:
+	- soundsort.png
 ---
 
+import { getImage, GatsbyImage } from 'gatsby-plugin-image';
 
-# Hello
+
+## Introduction
+This is a proof of concept.
+
+I have recently migrated to Gatsby and I'm firguring out if I can use GraphQL and MDX to write project pages or blog posts.
+
+## Embedded Images
+<GatsbyImage alt="green doggo" image={getImage(props.localImages[0])} />
+
+
+## Code Block
+```js
+export default function(){
+	return fun
+}
+```
+
+## List
+This is a list:
+- one
+- two
+- one
+- two
+- one
+- two
+- one
+- two
+- one
+- two
+
+## Numbered List
+This is a numbered list:
+1. one
+2. two
 
 **bold**
 asdasdas

@@ -28,7 +28,7 @@ export default function About() {
         <p className={styles.bigTextBody}>My experiences, both educationally and professionally, have led me to successfully enable small to medium size businesses to be visible online. I enjoy meeting new people and providing efficient and elegant solutions to empower their businesses and products to reach their highest potential</p>
 
         <h4 className={styles.sectionHeading}>How did I get here?</h4>
-        <p className={styles.bigTextBody}>Whilst studying and working as a structural engineer I developed a strong interest in programming when automating structural engineering calculations. After becoming infatuated with the intricacies of programming, I made my move into software engineering where my interest has matured into a passion for helping businesses grow through building elegant websites, creating an online presence and bespoke cloud-based software solutions. </p>
+        <p className={styles.bigTextBody}>Whilst studying and working as a structural engineer I developed a strong interest in programming when automating structural engineering calculations. After becoming infatuated with the intricacies of programming, I made my move into software engineering where my interest has matured into a passion for helping businesses grow through building elegant websites, creating them an online presence and bespoke cloud-based software solutions. </p>
 
         <BigLink />
       </div>
